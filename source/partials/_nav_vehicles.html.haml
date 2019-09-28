@@ -1,0 +1,8 @@
+.nav-container
+  =link_to '/' do
+    =image_tag('site_assets/SavannahRC.svg', class:'src-logo desktop')
+  =link_to '/' do  
+    =image_tag('site_assets/SRC.svg', class:'src-logo mobile')
+  .nav-items
+    =link_to 'Back', 'javascript:history.back()', class:'collection-nav-link'
+    =link_to 'About','/about', class:'about-nav-link'

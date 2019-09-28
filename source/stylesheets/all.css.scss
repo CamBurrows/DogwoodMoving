@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'index';
+@import 'vdp';
+@import 'about';
+@import 'navbar';
+@import 'footer';
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "intro-l", "Helvetica", sans-serif;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+a {
+  color: rgba(#000, 0.7);
+
+  &:focus,
+  &:hover {
+    color: rgba(#000, 0.6);
+  }
+}
+
+.wrap {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+.container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}

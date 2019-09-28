@@ -1,0 +1,22 @@
+.wrap
+  .hero-container
+    .down-arrow
+  .collection-container
+    %a{name:'collection'}
+    %h1
+      Collection
+    .vehicle-list-container
+      - data.vehicles.vehicles.each do |vehicle|
+        -if vehicle.current == "true"
+          =link_to("/vehicles/#{vehicle.photopath}/index.html", class:'vehicle-list-item', id:"#{vehicle.indexx}") do
+            =image_tag("#{vehicle.photopath}/cutout/cutout.png", class:'vehicle-list-cutout')
+            .year-make-model-vlp
+              #{vehicle.year} #{vehicle.make}
+              %br
+              %span
+                =vehicle.model
+            .line
+            .logo-container
+              .logo{class:"#{vehicle.make}"}
+              .logo{class:"#{vehicle.model} #{vehicle.photopath}"}
+    =link_to 'View Archive', '/archive', class:'archive-cta'

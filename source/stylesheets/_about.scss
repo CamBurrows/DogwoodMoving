@@ -1,0 +1,55 @@
+.about-container {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  @include tablet {
+    width: 96%
+  }
+}
+.left-col {
+  width: 50%;
+  float: left;
+  padding-right: 15px;
+  padding-top: 20px;
+  @include tablet {
+    width: 100%;
+    padding-right: 0px;
+  }
+  p {
+    @include intro-l;
+    color: $black;
+    line-height: 34px;
+    font-size: 22px;
+  }
+}
+.right-col {
+  width: 50%;
+  float: left;
+  padding-left: 15px;
+  padding-top: 20px;
+  @include tablet {
+    width: 100%;
+    padding-left: 0px;
+  }
+  .main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    float: left;
+  }
+  .secondary-image {
+    width: 64%;
+    height: auto;
+    float: left;
+    margin-right: 2%;
+  }
+  .third-image {
+    width: 34%;
+    float: right;
+    margin-bottom: 12px;
+  }
+  .fourth-image {
+    width: 34%;
+    float: right;
+  }
+}

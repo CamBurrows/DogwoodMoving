@@ -1,0 +1,156 @@
+.home-nav-container {
+  position: absolute;
+  width: 100%;
+  .src-logo {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 20px;
+    margin: 0 auto;
+    @include tablet {
+      right: unset;
+      left: 12px;
+    }
+  }
+  .nav-items {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    font-family: 'longhaul';
+    color: $red;
+    font-size: 24px;
+    @include tablet {
+      font-size: 18px;
+    }
+    a {
+      position: relative;
+      color: $red;
+      padding: 20px;
+      text-decoration: none;
+      letter-spacing: .5px;
+      &:before, &:after {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 140px;
+        height: 140px;
+        border: 2px solid rgba(167, 10, 10, 0.658);
+        border-radius: 50%;
+        content: '';
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+        -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+        transform: translateX(-50%) translateY(-50%) scale(0.2);
+      }
+      &:after {
+        width: 120px;
+        height: 120px;
+        border-width: 6px;
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+        -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+        transform: translateX(-50%) translateY(-50%) scale(0.8);
+      }
+      &:hover {
+        &:before, &:after {
+          opacity: 1;
+          -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+          -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+          transform: translateX(-50%) translateY(-50%) scale(1);
+        }
+      }
+    }
+  }
+}
+.nav-container {
+  display: block;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .src-logo {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+  }
+  .nav-items {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    a {
+    position: relative;
+    padding: 20px;
+    text-decoration: none;
+    letter-spacing: .5px;
+    @include longhaul;
+    font-size: 22px;
+    }
+    .collection-nav-link {
+      text-transform: uppercase;
+      color: $black;
+      @include transition;
+      &::before {
+        content:'';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: image-url('site_assets/left-arrow.png');
+        border-radius: 50%;
+        background-color: $black;
+        margin-right: 10px;
+        top: 2px;
+        text-transform: uppercase;
+        @include transition;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: center;
+        position: relative;
+      }
+      &:hover {
+        color: $red;
+        &::before {
+          background-color: $red;
+        }
+      }
+    }
+    .about-nav-link {
+      z-index: 3;
+      color: $white;
+      &::after {
+        content:'';
+        position: absolute;
+        background-color: $black;
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        z-index: -1;
+        left: -20px;
+        border-radius: 50%;
+        top: -110px;
+        @include transition;
+      }
+      &:hover {
+        &:after {
+          background-color: $red;
+        }
+      }
+    }
+  }
+}
+.desktop {
+  @include tablet {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  @include tablet {
+    display: block;;
+  }
+}
