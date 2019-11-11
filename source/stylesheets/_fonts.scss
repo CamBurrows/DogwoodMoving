@@ -1,35 +1,60 @@
 @font-face {
-  font-family: 'intro';
-  src: url('../fonts/Intro.eot');
-  src: url('../fonts/Intro.woff2') format('woff2'),
-       url('../fonts/Intro.woff') format('woff'),
-       url('../fonts/Intro.ttf') format('truetype'),
-       url('../fonts/Intro.svg#Intro') format('svg'),
-       url('../fonts/Intro.eot?#iefix') format('embedded-opentype');
+  font-family: 'prox';
+  src: url('../fonts/ProximaNova-Medium.eot');
+  src: url('../fonts/ProximaNova-Medium.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Medium.woff') format('woff'),
+       url('../fonts/ProximaNova-Medium.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Medium.svg#ProximaNova-Medium') format('svg'),
+       url('../fonts/ProximaNova-Medium.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'intro-l';
-  src: url('../fonts/Intro-Light.eot');
-  src: url('../fonts/Intro-Light.woff2') format('woff2'),
-       url('../fonts/Intro-Light.woff') format('woff'),
-       url('../fonts/Intro-Light.ttf') format('truetype'),
-       url('../fonts/Intro-Light.svg#Intro-Light') format('svg'),
-       url('../fonts/Intro-Light.eot?#iefix') format('embedded-opentype');
+  font-family: 'prox-l';
+  src: url('../fonts/ProximaNova-Light.eot');
+  src: url('../fonts/ProximaNova-Light.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Light.woff') format('woff'),
+       url('../fonts/ProximaNova-Light.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg'),
+       url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'longhaul';
-  src: url('../fonts/Longhaul.eot');
-  src: url('../fonts/Longhaul.woff2') format('woff2'),
-       url('../fonts/Longhaul.woff') format('woff'),
-       url('../fonts/Longhaul.ttf') format('truetype'),
-       url('../fonts/Longhaul.svg#Longhaul') format('svg'),
-       url('../fonts/Longhaul.eot?#iefix') format('embedded-opentype');
+  font-family: 'prox-b';
+  src: url('../fonts/ProximaNova-Bold.eot');
+  src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+       url('../fonts/ProximaNova-Bold.woff') format('woff'),
+       url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+       url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg'),
+       url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'prox-c-b';
+  src: url('../fonts/ProximaCondBold-webfont.eot');
+  src: url('../fonts/ProximaCondBold-webfont.woff2') format('woff2'),
+       url('../fonts/ProximaCondBold-webfont.woff') format('woff'),
+       url('../fonts/ProximaCondBold-webfont.ttf') format('truetype'),
+       url('../fonts/ProximaCondBold-webfont.svg#ProximaCondBold-webfont') format('svg'),
+       url('../fonts/ProximaCondBold-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sarcastic';
+  src: url('../fonts/Sarcastic-Regular.eot');
+  src: url('../fonts/Sarcastic-Regular.woff2') format('woff2'),
+       url('../fonts/Sarcastic-Regular.woff') format('woff'),
+       url('../fonts/Sarcastic-Regular.ttf') format('truetype'),
+       url('../fonts/Sarcastic-Regular.svg#Sarcastic-Regular') format('svg'),
+       url('../fonts/Sarcastic-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

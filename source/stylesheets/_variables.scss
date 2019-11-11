@@ -1,61 +1,8 @@
-$red: #b21f2f;
-$black: #000;
+$primary: #576B32;
+$primary-l: #688B29;
+$primary-l2: #89A94F;
+$secondary: #C0B354; 
 $white: #fff;
-$grey: #d1cdd0;
-
-@-webkit-keyframes shake-vertical {
-  0%,
-  100% {
-    -webkit-transform: translateY(10);
-            transform: translateY(10);
-  }
-  10%,
-  30%,
-  50%,
-  70% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  20%,
-  40%,
-  60% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  80% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  90% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-}
-@keyframes shake-vertical {
-  0%,
-  100% {
-    -webkit-transform: translateY(10);
-            transform: translateY(10);
-  }
-  10%,
-  30%,
-  50%,
-  70% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  20%,
-  40%,
-  60% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  80% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  90% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-}
+$black: #000;
+$off-white: #F2ECE0;
+$off-black: #0A0C0C;

@@ -1,12 +1,18 @@
-@mixin longhaul {
-  font-family: 'longhaul';
+@mixin font {
+  font-family: 'prox';
 };
-@mixin intro {
-  font-family: 'intro';
+@mixin font-l {
+  font-family: 'prox-l';
 };
-@mixin intro-l {
-  font-family: 'intro-l';
+@mixin font-b {
+  font-family: 'prox-b';
 };
+@mixin font-c-b {
+  font-family: 'prox-c-b';
+};
+@mixin h-font {
+  font-family: 'sarcastic';
+}
 @mixin transition {
   transition: .2s all ease-in-out;
   -webkit-transition: .2s all ease-in-out;
@@ -18,6 +24,11 @@
   }
 };
 @mixin laptop {
+  @media (max-width: 1024px) {
+    @content
+  }
+};
+@mixin tablet-lg {
   @media (max-width: 991px) {
     @content
   }

@@ -16,6 +16,13 @@ page '/*.txt', layout: false
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
+
+
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
@@ -31,11 +38,14 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def aws-img(image)
+    image_tag("https://dogwood-moving.s3.us-east-2.amazonaws.com/" + image)
+  end
+  def aws-url(image)
+    ("https://dogwood-moving.s3.us-east-2.amazonaws.com/" + image)
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
@@ -44,3 +54,9 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :directory_indexes
+
+set :relative_links, true
+
+Haml::TempleEngine.disable_option_validator!
