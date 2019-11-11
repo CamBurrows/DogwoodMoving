@@ -39,11 +39,11 @@ set :images_dir, 'images'
 # https://middlemanapp.com/basics/helper-methods/
 
 helpers do
-  def aws-img(image)
+  def aws_img(image)
     image_tag("https://dogwood-moving.s3.us-east-2.amazonaws.com/" + image)
   end
-  def aws-url(image)
-    ("https://dogwood-moving.s3.us-east-2.amazonaws.com/" + image)
+  def aws_url(image)
+    "https://dogwood-moving.s3.us-east-2.amazonaws.com/" + image
   end
 end
 
@@ -60,3 +60,5 @@ activate :directory_indexes
 set :relative_links, true
 
 Haml::TempleEngine.disable_option_validator!
+
+activate :livereload

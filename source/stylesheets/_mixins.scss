@@ -1,3 +1,4 @@
+//fonts
 @mixin font {
   font-family: 'prox';
 };
@@ -13,11 +14,22 @@
 @mixin h-font {
   font-family: 'sarcastic';
 }
+
+//transitions
 @mixin transition {
   transition: .2s all ease-in-out;
   -webkit-transition: .2s all ease-in-out;
   -moz-transition: .2s all ease-in-out;
 }
+
+//gradients
+
+//shadows
+@mixin img-shadow {
+  box-shadow: 0 30px 19px -15px rgba(0,0,0,0.50);
+}
+
+//mobile
 @mixin desktop {
   @media (max-width: 1440px) {
     @content
