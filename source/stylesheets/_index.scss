@@ -16,21 +16,28 @@
   .left-block {
     flex-grow: 1;
     height: 100%;
-    background-image: image-url('dogwood/dogwood-w-car.png');
-    background-size: 75% auto;
-    background-position: 50% 5%;
-    float: left;
+    @include aws-bg('graphics/dmc_truck_front_cutout.png');
+    background-color: $off-white;
+    background-size: 70%;
+    background-position: center;
+    background-position: 40% 90%;
+    overflow: hidden;
     background-repeat: no-repeat;
     transition: all 0.5s cubic-bezier(0.85, 0.03, 0.09, 0.99);
     position: relative;
     z-index: 6;
-    @media (min-width: 1600px) {
-      background-size: auto 60%;
-    }
     @include laptop{
       height: 40vh;
       background-size: auto 100%;
       background-position: right;
+    }
+    .sun {
+      width: 210px;
+      height: 210px;
+      @include aws-bg('graphics/sun.png');
+      position: absolute;
+      top: 20px;
+      right: -80px;
     }
     .dogwood-logo {
       width: 150px;
@@ -62,7 +69,7 @@
       background-position: -1px calc(100% + 1px);
       background-repeat: no-repeat;
     }
-    .dogwoods-garage-content {
+    .dogwood-content {
       position: absolute;
       width: 80%;
       left: 0;

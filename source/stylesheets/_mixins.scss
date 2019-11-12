@@ -55,3 +55,10 @@
     @content
   }
 };
+
+//qol
+@mixin aws-bg($img) {
+  background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/" + $img);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
