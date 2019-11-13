@@ -40,13 +40,16 @@
       right: -80px;
     }
     .dogwood-logo {
-      width: 150px;
-      height: 90px;
+      width: 100%;
+      height: 50%;
       position: absolute;
-      top: 20px;
-      left: 20px;
-      background-image: image-url('dogwood/dogwoods-logo-primary.png');
+      top: 0;
+      left: 0;
+      right: 0;
+      @include aws-bg('logos/DMC_SVG.svg');
       background-size: contain;
+      background-position: center;
+      @include transition;
     }
     .dogwood-visit-message {
       font-family: 'cooper-m';
@@ -149,6 +152,7 @@
     &:hover {
       flex-grow: 1.5;
       background-size: 67% auto;
+      background-position: 40% 110%;
       @media (min-width: 1600px) {
         background-size: auto 70%;
       }
@@ -170,7 +174,9 @@
         background: $off-white !important;
       }
       .dogwood-logo {
-        background-image: image-url('dogwood/dogwoods-logo.svg');
+        @include aws-bg('logos/dmc-white-color-bud.svg');
+        background-size: contain;
+        top: 30px;
       }
       .dogwood-visit-message {
         opacity: 1;
@@ -189,7 +195,7 @@
     &:hover {
       flex-grow: 1.5;
     }
-    .pbyp-cta-block {
+    .dogwood-cta-block {
       flex-grow: 1;
       transition: all 0.5s cubic-bezier(0.85, 0.03, 0.09, 0.99);
       position: relative;
