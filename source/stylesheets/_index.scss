@@ -23,7 +23,7 @@
     background-position: 40% 90%;
     overflow: hidden;
     background-repeat: no-repeat;
-    transition: all 0.5s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+    @include slide-trans;
     position: relative;
     z-index: 6;
     @include laptop{
@@ -35,9 +35,12 @@
       width: 210px;
       height: 210px;
       @include aws-bg('graphics/sun.png');
+      background-size: contain;
       position: absolute;
       top: 20px;
       right: -80px;
+      @include slide-trans;
+      opacity: .7;
     }
     .dogwood-logo {
       width: 100%;
@@ -170,6 +173,11 @@
       .details-col {
         border-color: $off-white;
       }
+      .sun {
+        top: 0px;
+        right: 120px;
+        opacity: .9;
+      }
       .faded-divider {
         background: $off-white !important;
       }
@@ -197,53 +205,53 @@
     }
     .dogwood-cta-block {
       flex-grow: 1;
-      transition: all 0.5s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+      @include slide-trans;
       position: relative;
       display: flex;
       align-items: center;
       flex-basis: 1 auto;
       overflow: hidden;
+      background-size: 100px;
+      background-position: 90% 50%;
+      &.double {
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+      &.half-cta {
+        width: 100%;
+        height: 100%;
+        h2 {
+          color: $off-black;
+        }
+      }
       @include laptop{
         flex-direction: column;
-      }
-      &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 5;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        background-size: auto 110%;
-        background-position: 60px 20px;
-        background-repeat: no-repeat;
-        @media (min-width: 1600px) {
-          background-position: 300px 20px !important;
-        }
-        @media (max-width: 1200px) {
-          background-position: right !important;
-        }
       }
       &:hover {
         flex-grow: 1.3;
         h2 {
-          padding-bottom: 80px;
+          padding-bottom: 40px;
+          font-size: 36px;
+          &.half-h2 {
+            font-size: 30px;
+          }
         }
         h3 {
           opacity: 1;
         }
+        &:after {
+          right: 180px;
+          opacity: 1;
+        }
       }
       h2 {
-        color: $off-white;
+        color: $white;
         position: absolute;
         z-index: 5;
         left: 30px;
+        @include font-b;
         transition: .5s all ease-in-out;
+        font-size: 30px;
         @media (max-width: 1200px){
           font-size: 30px !important;
         }
@@ -254,14 +262,14 @@
       }
       h3 {
         font-size: 18px;
-        font-family: 'cooper-m';
+        @include font;
         line-height: 1.3;
         text-transform: none;
         max-width: 400px;
         position: absolute;
         left: 30px;
         z-index: 6;
-        color: $off-white;
+        color: $white;
         bottom: 30px;
         opacity: 0;
         transition: .5s all ease-in-out;
@@ -276,77 +284,39 @@
       }
     }
     .cta-1 {
-      background-image: image-url('dogwood/pbyp-engine.png');
-      background-size: auto 80%;
-      background-position: 105% -20px;
-      background-repeat: no-repeat;
-      background-color: $primary;
-      &:before {
-        background: -moz-linear-gradient(left, rgba(0,147,229,1) 0%, rgba(0,147,229,1) 30%, rgba(0,147,229,0) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(0,147,229,1) 0%,rgba(0,147,229,1) 30%,rgba(0,147,229,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(0,147,229,1) 0%,rgba(0,147,229,1) 30%,rgba(0,147,229,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0093e5', endColorstr='#000093e5',GradientType=1 );
-        @media (max-width: 600px){
-          background: -moz-linear-gradient(left, rgba(0,147,229,1) 0%, rgba(0,147,229,1) 60%, rgba(0,147,229,0) 100%); /* FF3.6-15 */
-          background: -webkit-linear-gradient(left, rgba(0,147,229,1) 0%,rgba(0,147,229,1) 60%,rgba(0,147,229,0) 100%); /* Chrome10-25,Safari5.1-6 */
-          background: linear-gradient(to right, rgba(0,147,229,1) 0%,rgba(0,147,229,1) 60%,rgba(0,147,229,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0093e5', endColorstr='#000093e5',GradientType=1 );
-        }
-      }
-      &:after {
-        background-image:image-url('dogwood/dogwood-camaro.png')
-      }
-      h2 {
-        font-size: 48px;
-      }
-      .engine {
-        background-image: image-url('dogwood/pbyp-engine.png')
-      }
+      @include aws-bg('icons/dogwood-schedule-icon.svg');
+      background-color: $primary-l2;
     }
     .cta-2 {
-      background-color: $secondary;
-      background-image: image-url('dogwood/pbyp-engine2.png');
-      background-size: auto 80%;
-      background-position: 105% -20px;
-      background-repeat: no-repeat;
-      &:before {
-        background: -moz-linear-gradient(left, rgba(254,51,21,1) 0%, rgba(254,51,21,1) 30%, rgba(254,51,21,0) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(254,51,21,1) 0%,rgba(254,51,21,1) 30%,rgba(254,51,21,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(254,51,21,1) 0%,rgba(254,51,21,1) 30%,rgba(254,51,21,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe3315', endColorstr='#00fe3315',GradientType=1 );
-        @media (max-width: 600px){
-          background: -moz-linear-gradient(left, rgba(254,51,21,1) 0%, rgba(254,51,21,1) 60%, rgba(254,51,21,0) 100%); /* FF3.6-15 */
-          background: -webkit-linear-gradient(left, rgba(254,51,21,1) 0%,rgba(254,51,21,1) 60%,rgba(254,51,21,0) 100%); /* Chrome10-25,Safari5.1-6 */
-          background: linear-gradient(to right, rgba(254,51,21,1) 0%,rgba(254,51,21,1) 60%,rgba(254,51,21,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe3315', endColorstr='#00fe3315',GradientType=1 );
-        }
-      }
-      &:after {
-        background-image:image-url('dogwood/dogwood-mustang.png');
-        background-position: 10px 20px;
-      }
-      h2 {
-        font-size: 48px;
-      }
+      background-color: $primary-l;
+      @include aws-bg('icons/dogwood-boxes.svg');
     }
     .cta-3 {
+      background-color: $primary;
+      @include aws-bg('icons/dogwood-faq-icon.svg');
+    }
+    .cta-4 {
       background-color: $off-black;
-      background-image: image-url('dogwood/dogwood-daytona.png');
-      background-size: auto 100%;
-      background-position: right;
-      background-repeat: no-repeat;
-      &:before {
-        background: -moz-linear-gradient(left, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 50%, rgba(17,17,17,0) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(17,17,17,1) 0%,rgba(17,17,17,1) 50%,rgba(17,17,17,0) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(17,17,17,1) 0%,rgba(17,17,17,1) 50%,rgba(17,17,17,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        @media (max-width: 600px){
-          background: -moz-linear-gradient(left, rgba(17,17,17,1) 0%, rgba(17,17,17,1) 60%, rgba(17,17,17,0) 100%); /* FF3.6-15 */
-          background: -webkit-linear-gradient(left, rgba(17,17,17,1) 0%,rgba(17,17,17,1) 60%,rgba(17,17,17,0) 100%); /* Chrome10-25,Safari5.1-6 */
-          background: linear-gradient(to right, rgba(17,17,17,1) 0%,rgba(17,17,17,1) 60%,rgba(17,17,17,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      @include aws-bg('icons/dogwood-t.svg');
+    }
+    .cta-5 {
+      background-color: $grey;
+      @include aws-bg('logos/dogwood-bud.svg');
+      &:hover {
+        width: 130%;
+        h2 {
+          font-size: 36px;
         }
       }
-      h2 {
-        font-size: 48px;
+    }
+    .cta-6 {
+      background-color: $white;
+      @include aws-bg('icons/dogwood-phone.svg');
+      &:hover {
+        width: 110%;
+        h2 {
+          font-size: 36px;
+        }
       }
     }
   }
