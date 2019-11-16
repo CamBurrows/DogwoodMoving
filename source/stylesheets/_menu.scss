@@ -55,14 +55,23 @@
       @include transition;
     }
     .dogwood-visit-message {
-      font-family: 'cooper-m';
-      font-size: 18px;
+      @include font-b;
+      font-size: 30px;
       position: absolute;
       left: 20px;
-      top: 120px;
+      top: 50%;
       color: $white;
       opacity: 0;
       transition: .5s ease-in-out;
+      background-color: $primary;
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-overflow: wrap;
+      text-align: center;
     }
     .dogwood-gradient {
       position: absolute;
@@ -159,7 +168,6 @@
       @media (min-width: 1600px) {
         background-size: auto 70%;
       }
-      background-color: $primary;
       box-shadow: 9px 0px 16px -7px rgba(0,0,0,0.83);
       @include laptop{
         background-size: auto 100%;
@@ -181,13 +189,10 @@
       .faded-divider {
         background: $off-white !important;
       }
-      .dogwood-logo {
-        @include aws-bg('logos/dmc-white-color-bud.svg');
-        background-size: contain;
-        top: 30px;
-      }
       .dogwood-visit-message {
         opacity: 1;
+        -webkit-animation: shake-vertical 4s ease infinite both;
+	      animation: shake-vertical 4s ease infinite both;
       }
     }
   }
@@ -319,5 +324,23 @@
         }
       }
     }
+  }
+}
+.home-book-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  &:hover {
+    background-color: $off-white;
+  }
+}
+.home-phone-btn {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    color: $primary-l;
+    border-bottom: 2px solid $primary-l;
   }
 }

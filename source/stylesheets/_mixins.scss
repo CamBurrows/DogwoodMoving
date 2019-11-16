@@ -26,6 +26,11 @@
   -webkit-transition: .6s all ease-in-out;
   -moz-transition: .6s all ease-in-out;
 }
+@mixin trans-m {
+  transition: all 0.3s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+  -webkit-transition: all 0.3s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+  -moz-transition: all 0.3s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+}
 @mixin slide-trans {
   transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
   -webkit-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
@@ -37,6 +42,9 @@
 //shadows
 @mixin img-shadow {
   box-shadow: 0 30px 19px -15px rgba(0,0,0,0.50);
+}
+@mixin no-shadow {
+  box-shadow: 0 30px 19px -15px rgba(0,0,0,0.0);
 }
 
 //mobile
@@ -70,4 +78,62 @@
 @mixin aws-bg($img) {
   background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/" + $img);
   background-repeat: no-repeat;
+}
+
+//animation
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(10);
+            transform: translateY(10);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(10);
+            transform: translateY(10);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
 }

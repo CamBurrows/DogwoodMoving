@@ -1,7 +1,8 @@
 @import 'variables';
 @import 'mixins';
 @import 'fonts';
-@import 'index';
+@import 'menu';
+@import 'home';
 * {
   box-sizing: border-box;
 }
@@ -16,13 +17,11 @@ body {
 }
 a {
   color: rgba(#000, 0.7);
-
   &:focus,
   &:hover {
     color: rgba(#000, 0.6);
   }
 }
-
 .wrap {
   width: 100%;
   height: auto;
@@ -33,4 +32,27 @@ a {
   height: auto;
   overflow: auto;
   margin: 0 auto;
+}
+.dogwood-btn {
+  @include font-b;
+  color: $white;
+  background-color: $primary;
+  border-radius: 3px;
+  @include no-shadow;
+  cursor: pointer;
+  padding: 10px 40px;
+  @include transition;
+  display: block;
+  &:hover {
+    @include img-shadow;
+    transform: translateY(-6px);
+    background-color: $primary-l;
+  }
+}
+.dogwood-text-btn {
+  @include font-b;
+  color: $primary;
+  display: block;
+  cursor: pointer;
+  @include transition;
 }

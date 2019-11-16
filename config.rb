@@ -45,6 +45,12 @@ helpers do
   def aws_url(image)
     "https://dogwood-moving.s3.us-east-2.amazonaws.com/" + image
   end
+  def dogwood_phone
+    "919-656-1426"
+  end
+  def dogwood_email
+    "dogwoodnc@gmail.com"
+  end
 end
 
 # Build-specific configuration
