@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'fonts';
+@import 'navbar';
 @import 'menu';
 @import 'home';
 * {
@@ -24,8 +25,8 @@ a {
 }
 .wrap {
   width: 100%;
-  height: auto;
-  overflow: auto;
+  height: 100%;
+  position: relative;
 }
 .container {
   width: 86%;

@@ -17,7 +17,7 @@
     flex-grow: 1;
     height: 100%;
     @include aws-bg('graphics/dmc_truck_front_cutout.png');
-    background-color: $off-white;
+    background-color: $creme;
     background-size: 70%;
     background-position: center;
     background-position: 40% 90%;
@@ -173,13 +173,13 @@
         background-size: auto 100%;
       }
       h2, li {
-        color: $off-white !important;
+        color: $creme !important;
         @include laptop{
           color: $off-black;
         }
       }
       .details-col {
-        border-color: $off-white;
+        border-color: $creme;
       }
       .sun {
         top: 0px;
@@ -187,7 +187,7 @@
         opacity: .9;
       }
       .faded-divider {
-        background: $off-white !important;
+        background: $creme !important;
       }
       .dogwood-visit-message {
         opacity: 1;
@@ -331,7 +331,7 @@
   bottom: 40px;
   left: 40px;
   &:hover {
-    background-color: $off-white;
+    background-color: $creme;
   }
 }
 .home-phone-btn {

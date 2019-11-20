@@ -1,0 +1,47 @@
+.navbar-wrap {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 130px;
+  left: 0;
+  right: 0;
+  background-color: $off-white;
+  @include slide-trans;
+  &.compress-nav {
+    top: -130px;
+  }
+}
+.navbar-container {
+  height: 130px;
+  width: 96%;
+  margin: 0 auto;
+}
+.top-row {
+  position: relative;
+  height: 30px;
+  padding: 0 1rem;
+}
+.bottom-row {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a.nav-link {
+    color: $primary;
+    @include font-b;
+    font-size: 20px;
+    text-decoration: none;
+    &:hover {
+      color: $primary-l;
+    }
+  }
+  .nav-logo {
+    width: 140px;
+    height: 100%;
+    @include aws-bg('logos/dogwood-moving.svg');
+    background-size: contain;
+    background-position: center;
+  }
+}
