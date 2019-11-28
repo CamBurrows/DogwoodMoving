@@ -16,10 +16,21 @@
   width: 96%;
   margin: 0 auto;
 }
-.top-row {
+.under-row {
   position: relative;
   height: 30px;
   padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .nav-book-btn,
+  .nav-phone-btn {
+    background-color: $primary;
+    color: $off-white;
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin: 6px;
+  }
 }
 .bottom-row {
   position: relative;
@@ -38,10 +49,11 @@
     }
   }
   .nav-logo {
-    width: 140px;
+    width: 180px;
     height: 100%;
     @include aws-bg('logos/dogwood-moving.svg');
     background-size: contain;
     background-position: center;
+    position: relative;
   }
 }

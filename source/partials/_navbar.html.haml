@@ -1,10 +1,5 @@
 %nav.navbar-wrap
   .navbar-container
-    .top-row
-      .dogwood-text-btn.nav-book-btn{'data-toggle'=>'modal', 'data-target'=>'#booking-modal'}
-        Book Now
-      .dogwood-text-btn.home-phone-btn{href:"tel:#{dogwood_phone}"}
-        =dogwood_phone
     .bottom-row
       =link_to 'Pricing', '/pricing', class: 'nav-link'
       =link_to 'Packing', '/packing', class: 'nav-link'
@@ -13,3 +8,8 @@
       =link_to 'Team', '/team', class: 'nav-link'
       =link_to 'About', '/about', class: 'nav-link'
       =link_to 'Contact', '/contact', class: 'nav-link'
+    .under-row
+      .dogwood-text-btn.nav-book-btn{'data-toggle'=>'modal', 'data-target'=>'#booking-modal'}
+        Book Now
+      .dogwood-text-btn.nav-phone-btn{href:"tel:#{dogwood_phone}"}
+        =dogwood_phone
