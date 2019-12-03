@@ -35,13 +35,25 @@
 }
 
 @font-face {
+  font-family: 'prox-b-i';
+  src: url('../fonts/ProximaNova-BoldIt.eot');
+  src: url('../fonts/ProximaNova-BoldIt.woff2') format('woff2'),
+       url('../fonts/ProximaNova-BoldIt.woff') format('woff'),
+       url('../fonts/ProximaNova-BoldIt.ttf') format('truetype'),
+       url('../fonts/ProximaNova-BoldIt.svg#ProximaNova-BoldIt') format('svg'),
+       url('../fonts/ProximaNova-BoldIt.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'prox-c-b';
-  src: url('../fonts/ProximaCondBold-webfont.eot');
-  src: url('../fonts/ProximaCondBold-webfont.woff2') format('woff2'),
-       url('../fonts/ProximaCondBold-webfont.woff') format('woff'),
-       url('../fonts/ProximaCondBold-webfont.ttf') format('truetype'),
-       url('../fonts/ProximaCondBold-webfont.svg#ProximaCondBold-webfont') format('svg'),
-       url('../fonts/ProximaCondBold-webfont.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/ProximaNovaCondBold-webfont.eot');
+  src: url('../fonts/ProximaNovaCondBold-webfont.woff2') format('woff2'),
+       url('../fonts/ProximaNovaCondBold-webfont.woff') format('woff'),
+       url('../fonts/ProximaNovaCondBold-webfont.ttf') format('truetype'),
+       url('../fonts/ProximaNovaCondBold-webfont.svg#ProximaNovaCondBold-webfont') format('svg'),
+       url('../fonts/ProximaNovaCondBold-webfont.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }

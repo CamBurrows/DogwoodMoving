@@ -4,6 +4,8 @@
 @import 'navbar';
 @import 'menu';
 @import 'home';
+
+//general
 * {
   box-sizing: border-box;
 }
@@ -16,17 +18,15 @@ body {
   -moz-osx-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
 }
-a {
-  color: rgba(#000, 0.7);
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
-}
+
+//containers
 .wrap {
   width: 100%;
   height: 100%;
   position: relative;
+  &.nav-pad {
+    padding-top: 100px;
+  }
 }
 .container {
   width: 86%;
@@ -34,6 +34,8 @@ a {
   overflow: auto;
   margin: 0 auto;
 }
+
+//buttons
 .dogwood-btn {
   @include font-b;
   color: $white;
@@ -56,4 +58,91 @@ a {
   display: block;
   cursor: pointer;
   @include transition;
+}
+.dogwood-btn-outline {
+  position: relative;
+  height: 50px;
+  border-radius: 8px;
+  width: 250px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include font-b;
+  font-size: 18px;
+  &.green {
+    border: 2px solid $primary;
+    color: $primary;
+  }
+  &.white {
+    border: 2px solid $white;
+    color: $white;
+  }
+  &.center {
+    margin: 0 auto;
+  }
+}
+
+//content blocks
+.info-block {
+  padding: 100px 0;
+  .col-container {
+    overflow: auto;
+  }
+  .left-col {
+    float: left;
+    padding-right: 2%;
+    width: 50%;
+  }
+  .right-col {
+    float: left;
+    padding-left: 2%;
+    width: 50%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    @include img-shadow;
+  }
+}
+.cta-row {
+  width: 100%;
+  margin: 40px 0;
+
+}
+
+//text
+a {
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+h1 {
+  @include font;
+}
+h2 {
+  @include font;
+  &.bot-marg {
+    margin-bottom: 30px;
+  }
+}
+span.l {
+  font-family: 'prox-l' !important;
+}
+span.b-i {
+  font-family: 'prox-b-i' !important;
+}
+
+//colors
+.off-black {
+  color: $off-black;
+}
+.off-white {
+  color: $off-white;
 }

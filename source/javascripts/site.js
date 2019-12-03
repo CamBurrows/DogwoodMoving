@@ -9,6 +9,9 @@ dogwoodPageContent.prevScrollposFilter = window.pageYOffset;
 $(document).ready(function(){
   
 })
+$(document).scroll(function(){
+  navHideShow();
+})
 
 function navHideShow() {
   dogwoodPageContent.currentScrollPos = window.pageYOffset;

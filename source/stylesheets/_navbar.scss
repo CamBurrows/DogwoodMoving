@@ -1,29 +1,45 @@
 .navbar-wrap {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
-  height: 130px;
+  height: 80px;
   left: 0;
   right: 0;
+  z-index: 3;
   background-color: $off-white;
   @include slide-trans;
+  overflow: visible;
+  @include img-shadow;
   &.compress-nav {
-    top: -130px;
+    top: -120px;
+    .under-row {
+      opacity: 0;
+      top: -50px;
+    }
   }
 }
 .navbar-container {
-  height: 130px;
   width: 96%;
   margin: 0 auto;
+  position: relative;
+  z-index: 5;
 }
 .under-row {
+  opacity: 1;
   position: relative;
-  height: 30px;
-  padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  width: fit-content;
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: 0 0 20px 20px;
+  padding: 0px 10px 10px 10px;
+  @include slide-trans;
+  transition-delay: .3s;
+  top: 0;
+  z-index: 4;
+  @include img-shadow;
   .nav-book-btn,
   .nav-phone-btn {
     background-color: $primary;
@@ -36,10 +52,11 @@
 .bottom-row {
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 5;
   a.nav-link {
     color: $primary;
     @include font-b;
@@ -51,7 +68,7 @@
   }
   .nav-logo {
     width: 180px;
-    height: 100%;
+    height: 70%;
     @include aws-bg('logos/dogwood-moving.svg');
     background-size: contain;
     background-position: center;
