@@ -1,0 +1,656 @@
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(10);
+    transform: translateY(10); }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
+  80% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
+  90% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); } }
+
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(10);
+    transform: translateY(10); }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
+  80% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
+  90% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); } }
+
+@font-face {
+  font-family: 'prox';
+  src: url("../fonts/ProximaNova-Medium.eot");
+  src: url("../fonts/ProximaNova-Medium.woff2") format("woff2"), url("../fonts/ProximaNova-Medium.woff") format("woff"), url("../fonts/ProximaNova-Medium.ttf") format("truetype"), url("../fonts/ProximaNova-Medium.svg#ProximaNova-Medium") format("svg"), url("../fonts/ProximaNova-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'prox-l';
+  src: url("../fonts/ProximaNova-Light.eot");
+  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype"), url("../fonts/ProximaNova-Light.svg#ProximaNova-Light") format("svg"), url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'prox-b';
+  src: url("../fonts/ProximaNova-Bold.eot");
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold.svg#ProximaNova-Bold") format("svg"), url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'prox-b-i';
+  src: url("../fonts/ProximaNova-BoldIt.eot");
+  src: url("../fonts/ProximaNova-BoldIt.woff2") format("woff2"), url("../fonts/ProximaNova-BoldIt.woff") format("woff"), url("../fonts/ProximaNova-BoldIt.ttf") format("truetype"), url("../fonts/ProximaNova-BoldIt.svg#ProximaNova-BoldIt") format("svg"), url("../fonts/ProximaNova-BoldIt.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'prox-c-b';
+  src: url("../fonts/ProximaNovaCondBold-webfont.eot");
+  src: url("../fonts/ProximaNovaCondBold-webfont.woff2") format("woff2"), url("../fonts/ProximaNovaCondBold-webfont.woff") format("woff"), url("../fonts/ProximaNovaCondBold-webfont.ttf") format("truetype"), url("../fonts/ProximaNovaCondBold-webfont.svg#ProximaNovaCondBold-webfont") format("svg"), url("../fonts/ProximaNovaCondBold-webfont.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'sarcastic';
+  src: url("../fonts/Sarcastic-Regular.eot");
+  src: url("../fonts/Sarcastic-Regular.woff2") format("woff2"), url("../fonts/Sarcastic-Regular.woff") format("woff"), url("../fonts/Sarcastic-Regular.ttf") format("truetype"), url("../fonts/Sarcastic-Regular.svg#Sarcastic-Regular") format("svg"), url("../fonts/Sarcastic-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+.navbar-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: #fffefe;
+  transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+  -webkit-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+  -moz-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+  overflow: visible;
+  -webkit-box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0.5); }
+  .navbar-wrap.compress-nav {
+    top: -120px; }
+    .navbar-wrap.compress-nav .under-row {
+      opacity: 0;
+      top: -50px; }
+
+.navbar-container {
+  width: 96%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5; }
+
+.under-row {
+  opacity: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 0px 10px 10px 10px;
+  transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+  -webkit-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+  -moz-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+  top: 0;
+  z-index: 4;
+  -webkit-box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0.5); }
+  .under-row .nav-book-btn,
+  .under-row .nav-phone-btn {
+    background-color: #576B32;
+    color: #fffefe;
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin: 6px; }
+
+.bottom-row {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5; }
+  .bottom-row a.nav-link {
+    color: #576B32;
+    font-family: 'prox-b';
+    font-size: 20px;
+    text-decoration: none; }
+    .bottom-row a.nav-link:hover {
+      color: #688B29; }
+  .bottom-row .nav-logo {
+    width: 180px;
+    height: 70%;
+    background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/logos/dogwood-moving.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative; }
+
+.dogwood-home-wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  z-index: 6; }
+  @media (max-width: 1024px) {
+    .dogwood-home-wrap {
+      flex-direction: column;
+      height: auto;
+      overflow: auto; } }
+  @media (max-width: 600px) {
+    .dogwood-home-wrap {
+      height: 100vh;
+      overflow: hidden; } }
+  .dogwood-home-wrap .left-block {
+    flex-grow: 1;
+    height: 100%;
+    background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/graphics/dmc_truck_front_cutout.png");
+    background-repeat: no-repeat;
+    background-color: #F2ECE0;
+    background-size: 70%;
+    background-position: center;
+    background-position: 40% 90%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+    -webkit-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+    -moz-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+    position: relative;
+    z-index: 6; }
+    @media (max-width: 1024px) {
+      .dogwood-home-wrap .left-block {
+        height: 40vh;
+        background-size: auto 100%;
+        background-position: right; } }
+    .dogwood-home-wrap .left-block .sun {
+      width: 210px;
+      height: 210px;
+      background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/graphics/sun.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 20px;
+      right: -80px;
+      transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+      -webkit-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+      -moz-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+      opacity: .7; }
+    .dogwood-home-wrap .left-block .dogwood-logo {
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/logos/DMC_SVG.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transition: .2s all ease-in-out;
+      -webkit-transition: .2s all ease-in-out;
+      -moz-transition: .2s all ease-in-out; }
+    .dogwood-home-wrap .left-block .dogwood-visit-message {
+      font-family: 'prox-b';
+      font-size: 30px;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      color: #fff;
+      opacity: 0;
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      background-color: #576B32;
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-overflow: wrap;
+      text-align: center; }
+    .dogwood-home-wrap .left-block .dogwood-gradient {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      height: 300px;
+      background-image: url("/images/dogwood/dogwood-gradient.png");
+      background-size: contain;
+      background-position: -1px calc(100% + 1px);
+      background-repeat: no-repeat; }
+    .dogwood-home-wrap .left-block .dogwood-content {
+      position: absolute;
+      width: 80%;
+      left: 0;
+      right: 0;
+      bottom: 32px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center; }
+      @media (max-width: 1024px) {
+        .dogwood-home-wrap .left-block .dogwood-content {
+          width: 60%;
+          left: 30px;
+          margin: unset;
+          overflow: auto; } }
+      .dogwood-home-wrap .left-block .dogwood-content .title-col {
+        flex-grow: 1; }
+        @media (max-width: 991px) {
+          .dogwood-home-wrap .left-block .dogwood-content .title-col {
+            display: none; } }
+        .dogwood-home-wrap .left-block .dogwood-content .title-col h2 {
+          color: #0A0C0C;
+          font-size: 48px;
+          margin: 0px;
+          padding: 0px;
+          padding-right: 30px;
+          -webkit-transition: .5s all ease-in-out;
+          transition: .5s all ease-in-out; }
+          @media (max-width: 990px) {
+            .dogwood-home-wrap .left-block .dogwood-content .title-col h2 {
+              font-size: 30px; } }
+          @media (max-width: 600px) {
+            .dogwood-home-wrap .left-block .dogwood-content .title-col h2 {
+              font-size: 26px; } }
+          .dogwood-home-wrap .left-block .dogwood-content .title-col h2.top-pad {
+            padding-top: 16px; }
+        .dogwood-home-wrap .left-block .dogwood-content .title-col .faded-divider {
+          height: 3px;
+          width: 100%;
+          /* FF3.6-15 */
+          /* Chrome10-25,Safari5.1-6 */
+          background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(51%, #090909), color-stop(99%, #111111));
+          background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #090909 51%, #111111 99%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#111111',GradientType=1 );
+          /* IE6-9 */
+          -webkit-transition: .5s all ease-in-out;
+          transition: .5s all ease-in-out; }
+      .dogwood-home-wrap .left-block .dogwood-content .details-col {
+        border-left: 2px solid;
+        -webkit-transition: .5s all ease-in-out;
+        transition: .5s all ease-in-out; }
+        @media (max-width: 1024px) {
+          .dogwood-home-wrap .left-block .dogwood-content .details-col {
+            font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding-right: 8px; } }
+        .dogwood-home-wrap .left-block .dogwood-content .details-col .details-list {
+          list-style: none;
+          padding-left: 12px;
+          margin-bottom: 0px;
+          -webkit-transition: .5s all ease-in-out;
+          transition: .5s all ease-in-out; }
+          .dogwood-home-wrap .left-block .dogwood-content .details-col .details-list li {
+            font-size: 26px;
+            font-family: 'cooper-m';
+            color: #0A0C0C;
+            -webkit-transition: .5s all ease;
+            transition: .5s all ease; }
+            @media (max-width: 990px) {
+              .dogwood-home-wrap .left-block .dogwood-content .details-col .details-list li {
+                font-size: 16px; } }
+          .dogwood-home-wrap .left-block .dogwood-content .details-col .details-list.shrink li {
+            font-size: 20px; }
+    .dogwood-home-wrap .left-block:hover {
+      flex-grow: 1.5;
+      background-size: 67% auto;
+      background-position: 40% 110%;
+      -webkit-box-shadow: 9px 0px 16px -7px rgba(0, 0, 0, 0.83);
+              box-shadow: 9px 0px 16px -7px rgba(0, 0, 0, 0.83); }
+      @media (min-width: 1600px) {
+        .dogwood-home-wrap .left-block:hover {
+          background-size: auto 70%; } }
+      @media (max-width: 1024px) {
+        .dogwood-home-wrap .left-block:hover {
+          background-size: auto 100%; } }
+      .dogwood-home-wrap .left-block:hover h2, .dogwood-home-wrap .left-block:hover li {
+        color: #F2ECE0 !important; }
+        @media (max-width: 1024px) {
+          .dogwood-home-wrap .left-block:hover h2, .dogwood-home-wrap .left-block:hover li {
+            color: #0A0C0C; } }
+      .dogwood-home-wrap .left-block:hover .details-col {
+        border-color: #F2ECE0; }
+      .dogwood-home-wrap .left-block:hover .sun {
+        top: 0px;
+        right: 120px;
+        opacity: .9; }
+      .dogwood-home-wrap .left-block:hover .faded-divider {
+        background: #F2ECE0 !important; }
+      .dogwood-home-wrap .left-block:hover .dogwood-visit-message {
+        opacity: 1;
+        -webkit-animation: shake-vertical 4s ease infinite both;
+        animation: shake-vertical 4s ease infinite both; }
+  .dogwood-home-wrap .right-block {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    -webkit-transition: all 0.5s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+    transition: all 0.5s cubic-bezier(0.85, 0.03, 0.09, 0.99); }
+    @media (max-width: 1024px) {
+      .dogwood-home-wrap .right-block {
+        height: 60vh; } }
+    .dogwood-home-wrap .right-block:hover {
+      flex-grow: 1.5; }
+    .dogwood-home-wrap .right-block .dogwood-cta-block {
+      flex-grow: 1;
+      transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+      -webkit-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+      -moz-transition: all 0.6s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-basis: 1 auto;
+      overflow: hidden;
+      background-size: 100px;
+      background-position: 90% 50%; }
+      .dogwood-home-wrap .right-block .dogwood-cta-block.double {
+        flex-direction: row;
+        flex-wrap: nowrap; }
+      .dogwood-home-wrap .right-block .dogwood-cta-block.half-cta {
+        width: 100%;
+        height: 100%; }
+        .dogwood-home-wrap .right-block .dogwood-cta-block.half-cta h2 {
+          color: #0A0C0C; }
+      @media (max-width: 1024px) {
+        .dogwood-home-wrap .right-block .dogwood-cta-block {
+          flex-direction: column; } }
+      .dogwood-home-wrap .right-block .dogwood-cta-block:hover {
+        flex-grow: 1.3; }
+        .dogwood-home-wrap .right-block .dogwood-cta-block:hover h2 {
+          padding-bottom: 40px;
+          font-size: 36px; }
+          .dogwood-home-wrap .right-block .dogwood-cta-block:hover h2.half-h2 {
+            font-size: 30px; }
+        .dogwood-home-wrap .right-block .dogwood-cta-block:hover h3 {
+          opacity: 1; }
+        .dogwood-home-wrap .right-block .dogwood-cta-block:hover:after {
+          right: 180px;
+          opacity: 1; }
+      .dogwood-home-wrap .right-block .dogwood-cta-block h2 {
+        color: #fff;
+        position: absolute;
+        z-index: 5;
+        left: 30px;
+        font-family: 'prox-b';
+        -webkit-transition: .5s all ease-in-out;
+        transition: .5s all ease-in-out;
+        font-size: 30px; }
+        @media (max-width: 1200px) {
+          .dogwood-home-wrap .right-block .dogwood-cta-block h2 {
+            font-size: 30px !important; } }
+        @media (max-width: 600px) {
+          .dogwood-home-wrap .right-block .dogwood-cta-block h2 {
+            font-size: 20px !important;
+            left: 12px; } }
+      .dogwood-home-wrap .right-block .dogwood-cta-block h3 {
+        font-size: 18px;
+        font-family: 'prox';
+        line-height: 1.3;
+        text-transform: none;
+        max-width: 400px;
+        position: absolute;
+        left: 30px;
+        z-index: 6;
+        color: #fff;
+        bottom: 30px;
+        opacity: 0;
+        -webkit-transition: .5s all ease-in-out;
+        transition: .5s all ease-in-out; }
+        @media (max-width: 600px) {
+          .dogwood-home-wrap .right-block .dogwood-cta-block h3 {
+            font-size: 14px !important;
+            max-width: 80vw;
+            opacity: 1;
+            bottom: 12px;
+            left: 12px;
+            margin-bottom: 0px; } }
+    .dogwood-home-wrap .right-block .cta-1 {
+      background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/icons/dogwood-schedule-icon.svg");
+      background-repeat: no-repeat;
+      background-color: #89A94F; }
+    .dogwood-home-wrap .right-block .cta-2 {
+      background-color: #688B29;
+      background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/icons/dogwood-boxes.svg");
+      background-repeat: no-repeat; }
+    .dogwood-home-wrap .right-block .cta-3 {
+      background-color: #576B32;
+      background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/icons/dogwood-faq-icon.svg");
+      background-repeat: no-repeat; }
+    .dogwood-home-wrap .right-block .cta-4 {
+      background-color: #0A0C0C;
+      background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/icons/dogwood-t.svg");
+      background-repeat: no-repeat; }
+    .dogwood-home-wrap .right-block .cta-5 {
+      background-color: #D8D8D8;
+      background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/logos/dogwood-bud.svg");
+      background-repeat: no-repeat; }
+      .dogwood-home-wrap .right-block .cta-5:hover {
+        width: 130%; }
+        .dogwood-home-wrap .right-block .cta-5:hover h2 {
+          font-size: 36px; }
+    .dogwood-home-wrap .right-block .cta-6 {
+      background-color: #fff;
+      background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/icons/dogwood-phone.svg");
+      background-repeat: no-repeat; }
+      .dogwood-home-wrap .right-block .cta-6:hover {
+        width: 110%; }
+        .dogwood-home-wrap .right-block .cta-6:hover h2 {
+          font-size: 36px; }
+
+.home-book-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 40px; }
+  .home-book-btn:hover {
+    background-color: #F2ECE0; }
+
+.home-phone-btn {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  border-bottom: 2px solid transparent; }
+  .home-phone-btn:hover {
+    color: #688B29;
+    border-bottom: 2px solid #688B29; }
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/photos/hero-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .hero:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(0, 0, 0, 0)), color-stop(46%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.62)));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 46%, rgba(0, 0, 0, 0.62) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#9e000000',GradientType=0 ); }
+  .hero h1 {
+    color: #fff;
+    font-size: 120px;
+    font-family: 'prox-c-b';
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+    line-height: .9;
+    z-index: 2; }
+    .hero h1 span {
+      font-size: 150px; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "prox", "Helvetica", sans-serif;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch; }
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .wrap.nav-pad {
+    padding-top: 100px; }
+
+.container {
+  width: 86%;
+  height: auto;
+  overflow: auto;
+  margin: 0 auto; }
+
+.dogwood-btn {
+  font-family: 'prox-b';
+  color: #fff;
+  background-color: #576B32;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0);
+          box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  padding: 10px 40px;
+  transition: .2s all ease-in-out;
+  -webkit-transition: .2s all ease-in-out;
+  -moz-transition: .2s all ease-in-out;
+  display: block; }
+  .dogwood-btn:hover {
+    -webkit-box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0.5);
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    background-color: #688B29; }
+
+.dogwood-text-btn {
+  font-family: 'prox-b';
+  color: #576B32;
+  display: block;
+  cursor: pointer;
+  transition: .2s all ease-in-out;
+  -webkit-transition: .2s all ease-in-out;
+  -moz-transition: .2s all ease-in-out; }
+
+.dogwood-btn-outline {
+  position: relative;
+  height: 50px;
+  border-radius: 8px;
+  width: 250px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'prox-b';
+  font-size: 18px; }
+  .dogwood-btn-outline.green {
+    border: 2px solid #576B32;
+    color: #576B32; }
+  .dogwood-btn-outline.white {
+    border: 2px solid #fff;
+    color: #fff; }
+  .dogwood-btn-outline.center {
+    margin: 0 auto; }
+
+.info-block {
+  padding: 100px 0; }
+  .info-block .col-container {
+    overflow: auto; }
+  .info-block .left-col {
+    float: left;
+    padding-right: 2%;
+    width: 50%; }
+  .info-block .right-col {
+    float: left;
+    padding-left: 2%;
+    width: 50%; }
+  .info-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 30px 19px -15px rgba(0, 0, 0, 0.5); }
+
+.cta-row {
+  width: 100%;
+  margin: 40px 0; }
+
+a:focus, a:hover {
+  text-decoration: none; }
+
+p {
+  font-size: 18px;
+  line-height: 24px; }
+
+h1 {
+  font-family: 'prox'; }
+
+h2 {
+  font-family: 'prox'; }
+  h2.bot-marg {
+    margin-bottom: 30px; }
+
+span.l {
+  font-family: 'prox-l' !important; }
+
+span.b-i {
+  font-family: 'prox-b-i' !important; }
+
+.off-black {
+  color: #0A0C0C; }
+
+.off-white {
+  color: #fffefe; }
