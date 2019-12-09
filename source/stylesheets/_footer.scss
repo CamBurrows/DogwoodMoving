@@ -1,0 +1,11 @@
+.footer {
+  height: 66px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  @include font-b;
+  font-size: 18px;
+  background-color: $primary;
+}

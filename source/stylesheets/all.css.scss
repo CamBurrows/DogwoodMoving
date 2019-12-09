@@ -4,6 +4,7 @@
 @import 'navbar';
 @import 'menu';
 @import 'home';
+@import 'footer';
 
 //general
 * {
@@ -33,6 +34,7 @@ body {
   height: auto;
   overflow: auto;
   margin: 0 auto;
+  position: relative;
 }
 
 //buttons
@@ -58,6 +60,9 @@ body {
   display: block;
   cursor: pointer;
   @include transition;
+  &:hover {
+    color: $primary-l;
+  }
 }
 .dogwood-btn-outline {
   position: relative;
@@ -70,20 +75,33 @@ body {
   align-items: center;
   @include font-b;
   font-size: 18px;
+  @include transition;
   &.green {
     border: 2px solid $primary;
     color: $primary;
+    &:hover {
+      transform: translateY(-8px);
+      background-color: $primary;
+      color: $white;
+      @include shadow-tight;
+    }
   }
   &.white {
     border: 2px solid $white;
     color: $white;
+    &:hover {
+      transform: translateY(-8px);
+      background-color: $white;
+      color: $primary;
+      @include shadow-tight;
+    }
   }
   &.center {
     margin: 0 auto;
   }
 }
 
-//content blocks
+//layout
 .info-block {
   padding: 100px 0;
   .col-container {
@@ -104,12 +122,34 @@ body {
     height: auto;
     border-radius: 8px;
     @include img-shadow;
+    margin-bottom: 40px;
+  }
+}
+.cta-block-wrap {
+  padding: 100px 0px;
+  .cta-block-container {
+    display: flex;
+    justify-content: space-between;
+    &.flex-end {
+      justify-content: flex-end;
+    }
+    &.flex-start {
+      justify-content: flex-start;
+    }
+  }
+  .content-col {
+    width: 60%;
   }
 }
 .cta-row {
   width: 100%;
-  margin: 40px 0;
-
+  margin-top: 40px;
+  &.margin-bot {
+    margin-bottom: 40px;
+  }
+}
+.top-layer {
+  z-index: 2;
 }
 
 //text
@@ -135,6 +175,9 @@ h2 {
 span.l {
   font-family: 'prox-l' !important;
 }
+span.b {
+  font-family: 'prox-b' !important;
+}
 span.b-i {
   font-family: 'prox-b-i' !important;
 }
@@ -145,4 +188,7 @@ span.b-i {
 }
 .off-white {
   color: $off-white;
+}
+.white {
+  color: $white;
 }

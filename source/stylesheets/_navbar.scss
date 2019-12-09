@@ -47,6 +47,10 @@
     padding: 6px 12px;
     border-radius: 3px;
     margin: 6px;
+    &:hover {
+      color: $off-white;
+      background-color: $primary-l;
+    }
   }
 }
 .bottom-row {
