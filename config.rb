@@ -46,10 +46,10 @@ helpers do
     "https://dogwood-moving.s3.us-east-2.amazonaws.com/" + image
   end
   def dogwood_phone
-    "919-656-1426"
+    "(919) 656-1426"
   end
   def dogwood_email
-    "dogwoodnc@gmail.com"
+    "dogwoodmovingnc@gmail.com"
   end
 end
 

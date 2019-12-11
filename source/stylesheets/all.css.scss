@@ -5,6 +5,9 @@
 @import 'menu';
 @import 'home';
 @import 'footer';
+@import 'modal';
+@import 'forms';
+@import 'secondary';
 
 //general
 * {
@@ -18,6 +21,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
+  // &.modal-open {
+  //   .navbar-wrap {
+  //     width: calc(100% - 15px);
+  //     margin-right: 15px;
+  //   }
+  // }
 }
 
 //containers
@@ -26,7 +35,7 @@ body {
   height: 100%;
   position: relative;
   &.nav-pad {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }
 .container {
@@ -52,6 +61,9 @@ body {
     @include img-shadow;
     transform: translateY(-6px);
     background-color: $primary-l;
+  }
+  &.center {
+    margin: 0 auto;
   }
 }
 .dogwood-text-btn {
@@ -153,6 +165,43 @@ body {
 }
 
 //text
+h1.page-banner {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  vertical-align: center;
+  margin: 0;
+  @include h-font;
+  font-size: 120px;
+  color: $white;
+  position: relative;
+  @include primary-down;
+  &:before {
+    content:'';
+    height: 100%;
+    width: 70px;
+    @include aws-bg ('logos/dogwood-bullet-w.svg');
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 7%;
+  };
+  &:after {
+    content:'';
+    height: 100%;
+    width: 70px;
+    @include aws-bg ('logos/dogwood-bullet-w.svg');
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 7%;
+    transform: rotate(180deg);
+  }
+}
 a {
   &:focus,
   &:hover {
@@ -170,6 +219,9 @@ h2 {
   @include font;
   &.bot-marg {
     margin-bottom: 30px;
+  }
+  &.center {
+    text-align: center;
   }
 }
 span.l {

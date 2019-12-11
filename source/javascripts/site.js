@@ -7,7 +7,6 @@ dogwoodPageContentcurrentScrollPos = window.pageYOffset;
 dogwoodPageContent.prevScrollposFilter = window.pageYOffset;
 
 $(document).ready(function(){
-  
 })
 $(document).scroll(function(){
   navHideShow();
@@ -26,3 +25,38 @@ function navHideShow() {
   }
   dogwoodPageContent.prevScrollpos = dogwoodPageContent.currentScrollPos;
 }
+
+//ajax forms
+$(document).ready(function(){
+
+  function contact_success() {
+    $('.contact-form').addClass('submitted')
+    $('.contact-form .success').addClass('shown')
+  }
+
+  function contact_error() {
+  }
+
+  var contact_form = $('.contact-form').get(0);
+
+  $('.contact-form').on('submit', function(e){
+    e.preventDefault();
+    var data = new FormData(contact_form);
+    ajax(contact_form.method, contact_form.action, data, contact_success, contact_error);
+  })
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+})

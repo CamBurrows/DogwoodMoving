@@ -4,12 +4,14 @@
       =link_to 'Pricing', '/pricing', class: 'nav-link'
       =link_to 'Packing', '/packing', class: 'nav-link'
       =link_to 'FAQ', '/faq', class: 'nav-link'
-      =link_to '', '/', class: 'nav-logo'
+      =link_to '', '/home', class: 'nav-logo'
       =link_to 'Team', '/team', class: 'nav-link'
       =link_to 'About', '/about', class: 'nav-link'
       =link_to 'Contact', '/contact', class: 'nav-link'
-  .under-row
+  .under-row{class:"#{page_classes}"}
     .dogwood-text-btn.nav-book-btn{'data-toggle'=>'modal', 'data-target'=>'#booking-modal'}
-      Book Now
+      Book Move
+    .dogwood-text-btn.nav-msg-btn{'data-toggle'=>'modal', 'data-target'=>'#contact-modal'}
+      Message
     .dogwood-text-btn.nav-phone-btn{href:"tel:#{dogwood_phone}"}
       =dogwood_phone

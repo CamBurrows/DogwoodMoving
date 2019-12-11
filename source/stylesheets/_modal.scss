@@ -1,0 +1,42 @@
+#contact-modal {
+  width: 450px;
+  margin: 0 auto;
+  padding: 30px !important;
+  background-color: $off-white;
+  height:fit-content;
+  margin-top: 60px;
+  border-radius: 4px;
+  @include img-shadow;
+  @include tablet-lg {
+    width: 80%;
+  }
+  @include mobile {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .modal-dialog {
+    pointer-events: unset;
+  }
+  .modal-content-container {
+    width: 100%;
+  }
+  .modal-body {
+    width: 100%;
+  }
+  .close {
+    width: 36px;
+    height: 36px;
+    @include bg-img ('close-w.svg');
+    background-color: $primary-l;
+    background-position: center;
+    background-size: contain;
+    top: 0px;
+    right: 0px;
+    @include transition;
+    position: absolute;
+    z-index: 4;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}

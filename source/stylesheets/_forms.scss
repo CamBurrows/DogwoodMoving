@@ -1,0 +1,99 @@
+.contact-form {
+  legend {
+    color: $primary;
+    @include font-b;
+    border-width: 0px;
+    text-align: center;
+  }
+  select, input, textarea, .form-control, .form-group {
+    position: relative;
+    @include placeholder {
+      position: absolute;
+      left: 12px;
+    }
+  }
+  input, textarea, .form-control, select {
+    background-color: transparent;
+    border-radius: 0;
+    width: 100%;
+    position: relative;
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 40px;
+    border: none;
+    margin: 0 auto;
+    border-bottom: 2px solid #444444;
+    color: $off-black;
+    font-size: 18px;
+    @include transition;
+    @include font;
+    &.form-control {
+      box-shadow: unset;
+      -webkit-box-shadow: unset;
+    }
+    & + label {
+      color: $off-black;
+      @include transition;
+    }
+    &:focus {
+      box-shadow: none;
+      border-bottom: 2px solid $primary;
+      outline: unset;
+      & + label {
+        color: $primary-l;
+      }
+    }
+    &::placeholder {
+      @include font;
+      color: $off-black !important;
+    }
+    &:placeholder-shown {
+      border-bottom: 2px solid #a2a2a2;
+    }
+    &:placeholder-shown + label {
+      opacity: 0;
+      transform: translateY(100%);
+      color: #a2a2a2;
+    }
+    & + label {
+      @include font;
+      position: absolute;
+      color: #a2a2a2;
+      bottom: 34px;
+      font-size: 12px;
+      transition: ease-out 200ms;
+      opacity: 1;
+      transform: translateY(calc(50% + 1px));
+    }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      & + label {
+      display: none;
+      }
+    }
+  }
+  textarea {
+    height: 200px !important;
+    background-color: rgba(49, 101, 31, 0.1) !important;
+    & + label {
+      bottom: 98% !important;
+    }
+  }
+  select {
+    border-bottom: 2px solid #a2a2a2 !important;
+    & + label {
+      opacity: 0 !important;
+      transform: translateY(100%) !important;
+      color: #a2a2a2 !important;
+    }
+    &.show-label + label {
+      @include font;
+      position: absolute !important;
+      color: #a2a2a2 !important;
+      bottom: 38px !important;
+      font-size: 12px !important;
+      transition: ease-out 200ms !important;
+      opacity: 1 !important;
+      transform: translateY(calc(50% + 1px)) !important;
+    }
+  }
+}

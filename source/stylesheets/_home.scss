@@ -3,7 +3,7 @@
   width: 100%;
   @include aws-bg('photos/hero-image.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 50% 15%;
   position: relative;
   &:after {
     content:'';

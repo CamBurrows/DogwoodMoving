@@ -1,0 +1,16 @@
+%form.contact-form{:action => "https://formspree.io/mzbzwgyv", :method => "POST"}
+  %legend
+    Contact Us
+  .form-group
+    %label
+      Full Name
+    %input{:name => "full_name", :type => "text", :placeholder => "Text"}
+  .form-group  
+    %label
+      Email
+    %input{:name => "_replyto", :type => "email", :placeholder => "Email"}
+  .form-group
+    %label
+      Message
+    %textarea{:name => "message", :placeholder => "Message"}
+  %button.dogwood-btn.green{:type => "submit", class:'submit'} Send

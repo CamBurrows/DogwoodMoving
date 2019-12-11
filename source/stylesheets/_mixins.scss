@@ -85,6 +85,10 @@
   background-image: url("https://dogwood-moving.s3.us-east-2.amazonaws.com/" + $img);
   background-repeat: no-repeat;
 }
+@mixin bg-img($img) {
+  background-image: image-url($img);
+  background-repeat: no-repeat;
+}
 
 //gradients
 @mixin trans-black-down {
@@ -104,6 +108,19 @@
   background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.00) 100%);
   background: linear-gradient(90deg, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.00) 100%);
 }
+
+@mixin primary-down {
+  background-image: linear-gradient(180deg, #91A461 0%, #586B32 100%);
+}
+
+//forms
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
 
 //animation
 @-webkit-keyframes shake-vertical {
