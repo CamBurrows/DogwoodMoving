@@ -7,36 +7,38 @@
   <meta name="description" content="Dogwood Moving promises to have the best service around">
   <meta name="keywords" content="Dogwood Moving Company North Carolina Packing Service Booking Commercial Residential Professional">
   <title>Dogwood Moving Co.</title>
-  <link rel="shortcut icon" href="https://dogwood-moving.s3.us-east-2.amazonaws.com/logos/favicon.ico">
+  <link rel="shortcut icon" href="/images/dmc-favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="/stylesheets/all.css" rel="stylesheet" />
 </head>
 
 <body class="home home_index">
-  <div class='wrap'>
-      <nav class='navbar-wrap'>
+    <nav class='navbar-wrap'>
 <div class='navbar-container'>
 <div class='bottom-row'>
 <a href="/pricing" class="nav-link">Pricing</a>
 <a href="/packing" class="nav-link">Packing</a>
 <a href="/faq" class="nav-link">FAQ</a>
-<a href="/" class="nav-logo"></a>
+<a href="/home" class="nav-logo"></a>
 <a href="/team" class="nav-link">Team</a>
 <a href="/about" class="nav-link">About</a>
 <a href="/contact" class="nav-link">Contact</a>
 </div>
 </div>
-<div class='under-row'>
+<div class='home home_index under-row'>
 <div class='dogwood-text-btn nav-book-btn' data-target='#booking-modal' data-toggle='modal'>
-Book Now
+Book Move
 </div>
-<div class='dogwood-text-btn nav-phone-btn' href='tel:919-656-1426'>
-919-656-1426
+<div class='dogwood-text-btn nav-msg-btn' data-target='#contact-modal' data-toggle='modal'>
+Message
+</div>
+<div class='dogwood-text-btn nav-phone-btn' href='tel:(919) 656-1426'>
+(919) 656-1426
 </div>
 </div>
 </nav>
 
-    <div class='wrap'>
+  <div class='wrap'>
 <div class='hero'>
 <h1 class='hero-text'>
 Dedicated
@@ -157,8 +159,44 @@ If you’ve ever moved before, you’ll know that half the battle of a move lies
 </div>
 </div>
 
-      <div class='footer'>
+    <div class='footer'>
 © 2019 Dogwood Moving Company. All Rights Reserved.
+</div>
+
+  <div class='modal fade' id='contact-modal' role='dialog' tabindex='-1'>
+<button aria-label='Close' class='close' data-dismiss='modal' id='modal-close' type='button'></button>
+<div class='modal-dialog modal-dialog-centered' role='document'>
+<div class='modal-content-container'>
+<div class='modal-body'>
+<form action='https://formspree.io/mzbzwgyv' class='contact-form' method='POST'>
+<div class='success'></div>
+<legend>
+Contact Us
+</legend>
+<div class='form-group'>
+<input class='form-control' name='full_name' placeholder='Full Name' type='text'>
+<label>
+Full Name
+</label>
+</div>
+<div class='form-group'>
+<input class='form-control' name='_replyto' placeholder='Email' type='email'>
+<label>
+Email
+</label>
+</div>
+<div class='form-group'>
+<textarea class='form-control' name='message' placeholder='Message'></textarea>
+<label>
+Message
+</label>
+</div>
+<input name='_gotcha' style='display:none' type='text'>
+<button class='center dogwood-btn green submit' type='submit'>Send</button>
+</form>
+</div>
+</div>
+</div>
 </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
