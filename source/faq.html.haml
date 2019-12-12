@@ -1,17 +1,30 @@
 - @description = "Learn everything you need to know before your next move with Dogwood"
 - @keywords = 'Frequently Asked Questions, Questions, Moving Research, Moving Expertise'
-- @page_title = 'Faq'
+- @page_title = 'FAQ'
 
 .wrap.nav-pad
   %h1.page-banner
     Faq
-  .info-block.container
+  .container
     .faq-container
       -data.faq.each do |section|
         %h2{id:(section[0])[0,4]}=section[0]
-        -section[1].each_with_index do |question|
-          %p.question
+        -section[1].each_with_index do |question, i|
+          %p.question{id:"#{(section[0])[0,4]}-#{i}"}
             = question.question.html_safe
-          %p.answer
-            = question.answer.html_safe
+          .answer{class:"#{(section[0])[0,4]}-#{i}"}
+            .close-faq{class:"#{(section[0])[0,4]}-#{i}"}
+            %p
+              = question.answer.html_safe
+    .navigation-box
+      %p
+        Jump to:
+      .jump-to.Sche
+        Scheduling
+      .jump-to.Cost
+        Cost & Payment
+      .jump-to.Gene
+        General
+      .jump-to.Pack
+        Pack & Prep
 

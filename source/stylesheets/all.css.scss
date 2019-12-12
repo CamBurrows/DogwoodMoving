@@ -9,6 +9,8 @@
 @import 'forms';
 @import 'pricing';
 @import 'packing';
+@import 'faq';
+@import 'about_contact';
 
 //general
 * {
@@ -52,6 +54,7 @@ body {
   padding: 10px 40px;
   @include transition;
   display: block;
+  cursor: pointer;
   &:hover {
     @include img-shadow;
     transform: translateY(-6px);
@@ -67,6 +70,7 @@ body {
   display: block;
   cursor: pointer;
   @include transition;
+  cursor: pointer;
   &:hover {
     color: $primary-l;
   }
@@ -83,6 +87,7 @@ body {
   @include font-b;
   font-size: 18px;
   @include transition;
+  cursor: pointer;
   &.green {
     border: 2px solid $primary;
     color: $primary;
@@ -198,9 +203,13 @@ h1.page-banner {
   }
 }
 a {
+  color: $primary;
+  @include transition;
+  @include font-b;
   &:focus,
   &:hover {
     text-decoration: none;
+    color: $primary-l;
   }
 }
 p {

@@ -26,12 +26,30 @@ function navHideShow() {
   dogwoodPageContent.prevScrollpos = dogwoodPageContent.currentScrollPos;
 }
 
+//faq
+$(document).ready(function(){
+  $('.question').on('click', function(){
+    block = $(this).attr('id');
+    $(this).toggleClass('open');
+    $('.'+ block).toggleClass('open');
+  })
+  $('.close-faq').on('click', function(){
+    block = $(this).attr('class').split(' ')[0];
+    $('.answer.'+ block).toggleClass('open');
+    $('#'+ block).toggleClass('open');
+  })
+  $('.jump-to').on('click', function(){
+    block = $(this).attr('class').split(' ')[1];
+    $('html, body').animate({
+      scrollTop: ($("#" + block).offset().top) - 100
+    }, 2000);
+  })
+})  
 //ajax forms
 $(document).ready(function(){
 
   function contact_success() {
-    $('.contact-form').addClass('submitted')
-    $('.contact-form').addClass('.success')
+    $('.contact-form').addClass('success')
   }
 
   function contact_error() {

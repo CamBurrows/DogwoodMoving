@@ -1,0 +1,113 @@
+.faq-container {
+  width: 70%;
+  margin-right: auto;
+  position: relative;
+  padding: 60px 0;
+  h2 {
+    color: $primary;
+    font-size: 38px;
+    @include font-b;
+    margin-bottom: 30px;
+    border-bottom: 3px solid $primary-l;
+    margin-top: 30px;
+  }
+  .question {
+    color: $off-black;
+    font-size: 24px;
+    @include font-b;
+    cursor: pointer;
+    @include slide-trans;
+    margin-bottom: 30px;
+    margin-left: 12px;
+    line-height: 1.2;
+    &:hover {
+      color: $primary-l;
+    }
+    &:after{
+      content:'';
+      display: inline-block;
+      margin-left: 8px;
+      width: 28px;
+      height: 14px;
+      @include aws-bg('icons/chevron-up.svg');
+      transform: rotate(180deg);
+      @include transition;
+    }
+    &.open {
+      &:after {
+        transform: rotate(0deg);
+      }
+      color: $primary;
+      margin-bottom: 10px;
+    }
+  }
+  .answer {
+    .close-faq {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 14px;
+      height: 14px;
+      display: block;
+      @include aws-bg('icons/close.svg');
+      background-size: contain;
+      cursor: pointer;
+      @include transition;
+      &:hover {
+        background-color: $creme;
+      }
+    }
+    padding: 0;
+    max-height: 0px;
+    overflow: hidden;
+    border: 2px solid $primary;
+    border-width: 0px 2px;
+    padding: 0 20px;
+    @include slide-trans;
+    opacity: 0;
+    margin-bottom: 0px;
+    position: relative;
+    &.open {
+      max-height: 600px;
+      padding: 20px;
+      border-width: 2px;
+      opacity: 1;
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 0px;
+      strong {
+        @include font-b;
+      }
+    }
+    a {
+      color: $primary;
+      @include transition;
+      @include font-b;
+      &:hover {
+        color: $primary-l;
+      }
+    }
+  }
+}
+.navigation-box {
+  position: fixed;
+  right:0;
+  top: 40%;
+  border-radius: 16px 0px 0px 16px;
+  padding: 20px;
+  @include img-shadow;
+  border: 1px solid $primary-l2;
+  border-width: 1px 0px 1px 1px;
+  p {
+    color: $med-grey;
+  }
+  .jump-to {
+    font-size: 20px;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      color: $primary;
+    }
+  }
+}

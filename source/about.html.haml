@@ -1,17 +1,50 @@
 - @description = "Learn about The Dogwood Promise, what sets Dogwood apart from the competition"
 - @keywords = 'Dogwood Promise, Quality guaranteed, About Dogwood Moving, About Us'
-- @page_title = 'Faq'
+- @page_title = 'About'
 
 .wrap.nav-pad
   %h1.page-banner
     About
-  .info-block.container
+  .info-block.container.about-container
     .col-container
       .left-col
-        =aws_img('photos/packing-info-1.jpg')
-      .right-col
-        %h2.bot-marg.off-black
+        %h2.off-black
+          %span.l
+            Meet
           %span.b
-            Overview
+            the Owner
+        %p.off-black.bot-marg
+          My name is Ryan King, and I am the Owner/Managing Partner of Dogwood Moving. We are a locally
+          owned Residential and Commercial moving company based out of Raleigh, NC. I was raised in
+          Wilmington, NC until the age of 18 when I attended Queens University of Charlotte as a collegiate
+          athlete. In that time, I began working for Hornet Moving and soon becoming the General Manager. After
+          2 years, we ranked as one of the highest rated moving companies in North Carolina! The growing
+          success and reputation led me to start Dogwood Moving.
+        %h2.off-black
+          %span.l
+            The
+          %span.b
+            Dogwood Promise
         %p.off-black
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          Here at Dogwood Moving, we promise to provide excellent customer service by getting the job done
+          safely and efficiently. I have had a unique and rewarding perspective, working my way from mover to
+          manager to owner. This has allowed me the opportunity to connect with our customers and staff alike
+          and see the crucial connection between employee and customer. The happier your employees, the
+          harder they will work, which will lead to a happier customer. 
+          %br
+          %br
+          This belief is one I instill in the entire Dogwood Moving team to assure that we provide a high-quality service to our customers, while continuing to grow as a successful company.This company is dedicated to quality, hard work, and excellent customer service. These three pillars are the foundation of our company, and we prove that with each and every move we complete.
+          %br
+          %br
+          Thank you,
+          %br
+          Ryan King
+          %br
+          %br
+          Owner | Dogwood Moving
+          %br
+          =link_to dogwood_phone, "tel:#{dogwood_phone}"
+          %br
+          =link_to dogwood_email, "mailto:#{dogwood_phone}"
+      .right-col
+        =aws_img('photos/packing-info-1.jpg')
