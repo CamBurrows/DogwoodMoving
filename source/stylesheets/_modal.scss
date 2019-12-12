@@ -1,7 +1,7 @@
 #contact-modal {
   width: 450px;
   margin: 0 auto;
-  padding: 30px !important;
+  padding: 0px !important;
   background-color: $off-white;
   height:fit-content;
   margin-top: 60px;
@@ -16,6 +16,7 @@
   }
   .modal-dialog {
     pointer-events: unset;
+    padding: 60px 30px !important;
   }
   .modal-content-container {
     width: 100%;

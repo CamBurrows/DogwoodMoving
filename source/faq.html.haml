@@ -6,12 +6,12 @@
   %h1.page-banner
     Faq
   .info-block.container
-    .col-container
-      .left-col
-        =aws_img('photos/packing-info-1.jpg')
-      .right-col
-        %h2.bot-marg.off-black
-          %span.b
-            Overview
-        %p.off-black
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+    .faq-container
+      -data.faq.each do |section|
+        %h2{id:(section[0])[0,4]}=section[0]
+        -section[1].each_with_index do |question|
+          %p.question
+            = question.question.html_safe
+          %p.answer
+            = question.answer.html_safe
+
