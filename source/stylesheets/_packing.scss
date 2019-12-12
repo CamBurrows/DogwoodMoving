@@ -1,0 +1,104 @@
+.packing-wrap {
+  background-color: $off-black;
+  padding: 100px 0;
+}
+.packing-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94% !important;
+  max-width: unset;
+  padding: 60px;
+  position: relative;
+  flex-wrap: wrap;
+  .card {
+    width: 49%;
+    height: 370px;
+    border-radius: 16px;
+    overflow: hidden;
+    @include img-shadow;
+    @include transition;
+    margin-bottom: 4%;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      transform: scale(1.05);
+    }
+    .header {
+      height: 55px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $off-white;
+      @include font-b;
+      font-size: 34px;
+      background-color: $primary;
+      position: relative;
+    }
+    .card-content {
+      height: 315px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      .top {
+        padding: 20px;
+        line-height: 1;
+        width: 100%;
+        text-align: center;
+        p {
+          text-align: center;
+          font-size: 26px;
+          margin: 0;
+          &.light {
+            @include font-l;
+          }
+          &.bold {
+            @include font-b;
+          }
+        }
+      }
+      .col-wrap {
+        display: flex;
+        height: 252px;
+        width: 96%;
+        margin: 0 auto;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+      .image-col {
+        width: 55%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-size: 70% auto;
+        justify-content: flex-end;
+        .image-row {
+          margin-bottom: 50px;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+          p {
+            display: inline;
+          }
+        }
+        &.two-box {
+          @include aws-bg('graphics/2-moving-boxes.png');
+          background-position: 80% 64%;
+        }
+        &.three-box {
+          @include aws-bg('graphics/3-moving-boxes.png');
+          .image-row {
+            margin-bottom: 40px;
+          }
+        }
+      }
+      .list-col {
+        padding-top: 20px;
+        padding-left: 10px;
+        border-left: 1px solid $primary-l;
+      }
+    }
+  }
+}
