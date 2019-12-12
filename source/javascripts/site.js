@@ -31,7 +31,7 @@ $(document).ready(function(){
 
   function contact_success() {
     $('.contact-form').addClass('submitted')
-    $('.contact-form .success').addClass('shown')
+    $('.contact-form').addClass('.success')
   }
 
   function contact_error() {

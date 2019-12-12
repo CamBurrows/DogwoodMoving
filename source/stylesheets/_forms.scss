@@ -96,4 +96,20 @@
       transform: translateY(calc(50% + 1px)) !important;
     }
   }
+  .success-message {
+    display: none;
+    @include font-b;
+    font-size: 24px;
+    color: $primary;
+    &:after {
+      content: '✔';
+      width: 40px;
+      height: 40px;
+      color: $white;
+      background-color: $primary;
+      @include font-b;
+      font-size: 30px;
+      border-radius: 100%;
+    }
+  }
 }
