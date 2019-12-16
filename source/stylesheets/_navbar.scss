@@ -32,7 +32,7 @@
   align-items: center;
   width: fit-content;
   margin: 0 auto;
-  background-color: $white;
+  @include white-trans-down;
   border-radius: 0 0 20px 20px;
   padding: 0px 10px 10px 10px;
   @include slide-trans;
@@ -40,30 +40,6 @@
   top: 0;
   z-index: 4;
   @include img-shadow;
-  &.pricing_index {
-    margin: 0 0 0 70%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  &.packing_index {
-    margin: 0 0 0 70%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  &.faq_index {
-    margin: 0 0 0 70%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  &.team_index {
-    margin: 0 0 0 70%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  &.about_index {
-    margin: 0 0 0 70%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  &.contact_index {
-    margin: 0 0 0 70%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
   .nav-msg-btn,
   .nav-book-btn,
   .nav-phone-btn {

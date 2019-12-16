@@ -1,0 +1,7 @@
+.modal.fade#youtube-modal{tabindex:"-1", role:"dialog"}
+  %button.close#modal-close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+  .modal-dialog.modal-dialog-centered{role:"document"}
+    .modal-content-container
+      .modal-body
+        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/FgxTBTX-J-k", :width => "560"}
+

@@ -9,8 +9,10 @@
       %br
       %span
         to Quality
+      .video-cta{'data-toggle'=>'modal','data-target'=>'#youtube-modal'}
+        Watch Video
   .info-block.container
-    .col-container
+    .col-container.img-left
       .left-col
         =aws_img('photos/home-info-1.png')
       .right-col
@@ -29,7 +31,7 @@
         %p.off-black
           Fully licensed and insured, our professionally trained team will treat your belongings like their own 
           – safely and efficiently packing and moving them to your new destination. Dogwood Moving is proudly servicing Raleigh, 
-          NC and surrounding areas. Call us at today at 919-656-1426 to get your free estimate today!
+          NC and surrounding areas. Call us at today at 919-656-1426 to get your free estimate!
     .cta-row
       =link_to 'Learn More', '/pricing', class:'dogwood-btn-outline green center'
   .cta-block-wrap.pricing-block
@@ -50,7 +52,7 @@
         .cta-row.margin-bot
           =link_to 'View Pricing', '/pricing', class:'dogwood-btn-outline white left'
   .info-block.container
-    .col-container
+    .col-container.img-left
       .left-col
         =aws_img('photos/home-info-2.jpg')
       .right-col

@@ -10,11 +10,9 @@
       Continue
       %br
       to Site
-    .dogwood-gradient
-    .dogwood-content
-    .dogwood-btn.primary.home-book-btn{'data-toggle'=>'modal', 'data-target'=>'#booking-modal'}
+    .dogwood-btn.primary#home-book-btn{'data-toggle'=>'modal', 'data-target'=>'#booking-modal', onclick:"event.preventDefault();"}
       Book Now
-    .dogwood-text-btn.home-phone-btn{href:"tel:#{dogwood_phone}"}
+    #home-phone-btn.phone-btn{onclick:"event.preventDefault();window.open('tel:#{dogwood_phone}');"}
       =dogwood_phone
   .right-block.half-block
     %a.dogwood-cta-block.cta-1{:href=>'/pricing'}
@@ -22,7 +20,7 @@
         Pricing
       %h3
         All the info you'll need to book your move today.
-    %a.dogwood-cta-block.cta-2{:href=>'/packing-supplies'}
+    %a.dogwood-cta-block.cta-2{:href=>'/packing'}
       %h2
         Packing + Supplies
       %h3
@@ -41,6 +39,10 @@
       %a.dogwood-cta-block.half-cta.cta-5{:href=>'/about'}
         %h2.half-h2
           About Us
+        %h3
+          Learn about the Dogwood Promise.
       %a.dogwood-cta-block.half-cta.cta-6{:href=>'/contact'}
         %h2.half-h2
           Contact
+        %h3
+          All the ways you can reach us.

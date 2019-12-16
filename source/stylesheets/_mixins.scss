@@ -108,7 +108,12 @@
   background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.00) 100%);
   background: linear-gradient(90deg, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.00) 100%);
 }
-
+@mixin white-trans-down {
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.96) 8%, rgba(255,255,255,0.5) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0.96) 8%,rgba(255,255,255,0.5) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.96) 8%,rgba(255,255,255,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#80ffffff',GradientType=0 );
+}
 @mixin primary-down {
   background-image: linear-gradient(180deg, #91A461 0%, #586B32 100%);
 }

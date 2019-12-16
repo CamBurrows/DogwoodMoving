@@ -111,23 +111,85 @@ body {
   &.center {
     margin: 0 auto;
   }
+  @include tablet-lg {
+    margin: 0 auto;
+  }
 }
-
+.phone-btn {
+  &.green, &#home-phone-btn {
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      @include aws-bg('icons/phone-g.svg');
+      background-size: contain;
+      background-position: center;
+      margin-right: 8px;
+      @include slide-trans;
+    }
+    &:hover {
+      &:before {
+        @include aws-bg('icons/phone-w.svg');
+        transform: rotate(30deg);
+      }
+    }
+  }
+  &.white {
+    &:before {
+      display: inline-block;
+      content: '';
+      width: 16px;
+      height: 16px;
+      @include aws-bg('icons/close.svg');
+      background-size: contain;
+      background-position: center;
+      margin-right: 8px;
+    }
+    &:hover {
+      &:before {
+        @include aws-bg('icons/phone-g.svg');
+        transform: rotate(30deg);
+      }
+    }
+  }
+}
 //layout
 .info-block {
   padding: 100px 0;
   .col-container {
     overflow: auto;
+    display: flex;
+    &.img-left {
+      @include tablet-lg {
+        flex-direction: column-reverse;
+      }
+    }
+    &.img-right {
+      @include tablet-lg {
+        flex-direction: column;
+      }
+    }
   }
   .left-col {
     float: left;
     padding-right: 2%;
     width: 50%;
+    @include tablet-lg {
+      width: 100%;
+      padding: 0;
+      float: none;
+    }
   }
   .right-col {
     float: left;
     padding-left: 2%;
     width: 50%;
+    @include tablet-lg {
+      width: 100%;
+      padding: 0;
+      float: none;
+    }
   }
   img {
     width: 100%;
@@ -151,6 +213,9 @@ body {
   }
   .content-col {
     width: 60%;
+    @include tablet-lg {
+      width: 100%;
+    }
   }
 }
 .cta-row {
@@ -176,28 +241,29 @@ h1.page-banner {
   color: $white;
   position: relative;
   @include primary-down;
+  padding-top: 60px;
   &:before {
     content:'';
-    height: 100%;
+    height: calc(100% - 60px);
     width: 70px;
     @include aws-bg ('logos/dogwood-bullet-w.svg');
     background-size: contain;
     background-position: center;
     position: absolute;
     display: block;
-    top: 0;
     left: 7%;
+    bottom: 0;
   };
   &:after {
     content:'';
-    height: 100%;
+    height: calc(100% - 70px);
     width: 70px;
     @include aws-bg ('logos/dogwood-bullet-w.svg');
     background-size: contain;
     background-position: center;
     position: absolute;
     display: block;
-    top: 0;
+    bottom:0;
     right: 7%;
     transform: rotate(180deg);
   }
@@ -226,6 +292,9 @@ h2 {
   }
   &.center {
     text-align: center;
+  }
+  @include tablet-lg {
+    font-size: 26px;
   }
 }
 span.l {

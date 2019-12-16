@@ -26,6 +26,16 @@ function navHideShow() {
   dogwoodPageContent.prevScrollpos = dogwoodPageContent.currentScrollPos;
 }
 
+//modal bg close
+// $(document).ready(function(){
+//   $('.modal-backdrop').on('click', function(){
+//     console.log('triggered')
+//     modal = $(this).parent().attr('id')
+
+//     $('#' + modal).modal('hide')
+//   })
+// });
+
 //faq
 $(document).ready(function(){
   $('.question').on('click', function(){
@@ -45,6 +55,7 @@ $(document).ready(function(){
     }, 2000);
   })
 })  
+
 //ajax forms
 $(document).ready(function(){
 

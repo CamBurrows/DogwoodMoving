@@ -20,16 +20,15 @@
     background-color: $creme;
     background-size: 70%;
     background-position: center;
-    background-position: 40% 90%;
+    background-position: 40% 100%;
     overflow: hidden;
     background-repeat: no-repeat;
     @include slide-trans;
     position: relative;
     z-index: 6;
     @include laptop{
-      height: 40vh;
-      background-size: auto 100%;
-      background-position: right;
+      height: 20vh;
+      background-image: none;
     }
     .sun {
       width: 210px;
@@ -40,11 +39,14 @@
       top: 20px;
       right: -80px;
       @include slide-trans;
-      opacity: .7;
+      opacity: .3;
+      @include laptop {
+        display: none;
+      }
     }
     .dogwood-logo {
       width: 100%;
-      height: 50%;
+      height: 42%;
       position: absolute;
       top: 0;
       left: 0;
@@ -53,6 +55,16 @@
       background-size: contain;
       background-position: center;
       @include transition;
+      @include laptop {
+        height: 100%;
+        @include aws-bg('logos/dmc-simplified.svg');
+        background-size: auto 80%;
+      }
+      @include tablet {
+        width: 50%;
+        left: 0;
+        background-size: auto 90%;
+      }
     }
     .dogwood-visit-message {
       @include font-b;
@@ -72,17 +84,7 @@
       align-items: center;
       text-overflow: wrap;
       text-align: center;
-    }
-    .dogwood-gradient {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 300px;
-      height: 300px;
-      background-image: image-url('dogwood/dogwood-gradient.png');
-      background-size: contain;
-      background-position: -1px calc(100% + 1px);
-      background-repeat: no-repeat;
+      @include img-shadow;
     }
     .dogwood-content {
       position: absolute;
@@ -184,7 +186,7 @@
       .sun {
         top: 0px;
         right: 120px;
-        opacity: .9;
+        opacity: .6;
       }
       .faded-divider {
         background: $creme !important;
@@ -192,7 +194,12 @@
       .dogwood-visit-message {
         opacity: 1;
         -webkit-animation: shake-vertical 4s ease infinite both;
-	      animation: shake-vertical 4s ease infinite both;
+        animation: shake-vertical 4s ease infinite both;
+        @include laptop {
+          display: none;
+          opacity: 0;
+          animation: none;
+        }
       }
     }
   }
@@ -201,9 +208,11 @@
     flex-direction: column;
     flex-grow: 1;
     height: 100%;
-    transition: all 0.5s cubic-bezier(0.85, 0.03, 0.09, 0.99);
+    @include slide-trans;
     @include laptop{
-      height: 60vh;
+      height: 80vh;
+      justify-content: center
+      ;
     }
     &:hover {
       flex-grow: 1.5;
@@ -225,18 +234,23 @@
       &.half-cta {
         width: 100%;
         height: 100%;
-        h2 {
+        h2, h3 {
           color: $off-black;
         }
-      }
-      @include laptop{
-        flex-direction: column;
+        h3 {
+          opacity: 0 !important;
+        }
+        &:hover {
+          h3 {
+            opacity: 1 !important;
+          }
+        }
       }
       &:hover {
         flex-grow: 1.3;
         h2 {
           padding-bottom: 40px;
-          font-size: 36px;
+          font-size: 30px;
           &.half-h2 {
             font-size: 30px;
           }
@@ -249,13 +263,31 @@
           opacity: 1;
         }
       }
+      @include laptop{
+        flex-direction: column;
+        justify-content: center;
+        background-size: 70px;
+        &:hover {
+          h2 {
+            padding-bottom: 0px;
+          }
+          flex-grow: 1;
+        }
+      }
+      @include tablet-lg{
+        background-size: 60px;
+      }
+      @include mobile{
+        background-size: 50px;
+      }
       h2 {
         color: $white;
         position: absolute;
         z-index: 5;
         left: 30px;
+        padding-bottom: 0px;
         @include font-b;
-        transition: .5s all ease-in-out;
+        @include slide-trans;
         font-size: 30px;
         @media (max-width: 1200px){
           font-size: 30px !important;
@@ -268,6 +300,7 @@
       h3 {
         font-size: 18px;
         @include font;
+        @include slide-trans;
         line-height: 1.3;
         text-transform: none;
         max-width: 400px;
@@ -277,14 +310,10 @@
         color: $white;
         bottom: 30px;
         opacity: 0;
-        transition: .5s all ease-in-out;
-        @media (max-width: 600px){
-          font-size: 14px !important;
-          max-width: 80vw;
-          opacity: 1;
-          bottom: 12px;
-          left: 12px;
-          margin-bottom: 0px;
+        @include laptop{
+          display: none;
+          padding: 0;
+          margin: 0;
         }
       }
     }
@@ -326,21 +355,49 @@
     }
   }
 }
-.home-book-btn {
+#home-book-btn {
   position: absolute;
-  bottom: 40px;
   left: 40px;
+  bottom: 40px;
+  background-color: $primary-l;
+  font-size: 18px;
   &:hover {
-    background-color: $creme;
+    background-color: $primary;
+  }
+  @include tablet {
+    top: 56px;
+    right: 5%;
+    left: unset;
+    bottom: unset;
   }
 }
-.home-phone-btn {
+#home-phone-btn {
+  display: block;
   position: absolute;
-  right: 40px;
   bottom: 40px;
-  border-bottom: 2px solid transparent;
+  right: 40px;
+  height: 50px;
+  border-radius: 8px;
+  width: 200px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include font-b;
+  font-size: 18px;
+  @include transition;
+  cursor: pointer;
+  border: 2px solid $primary;
+  color: $primary;
+  z-index: 7;
   &:hover {
-    color: $primary-l;
-    border-bottom: 2px solid $primary-l;
+    transform: translateY(-8px);
+    background-color: $primary;
+    color: $white;
+    @include shadow-tight;
+  }
+  @include tablet {
+    top: 4px;
+    right: 5%;
   }
 }

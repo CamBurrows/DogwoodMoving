@@ -23,18 +23,66 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     height: 40%;
     width: 100%;
     line-height: .9;
     z-index: 2;
     span {
       font-size: 150px;
+      @include tablet {
+        font-size: 70px;
+      }
+    }
+    @include tablet {
+      font-size: 60px;
+    }
+    .video-cta {
+      color: $primary;
+      font-size: 30px;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 20px 40px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      background-color: $white;
+      border-radius: 8px;
+      @include transition;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 35px;
+        height: 20px;
+        background-size: contain;
+        background-position: center;
+        @include aws-bg('icons/play-g.svg');
+        @include transition;
+        margin-right: 0px;
+      }
+      &:hover {
+        background-color: $primary;
+        color: $white;
+        transform: translateY(-2px);
+        @include img-shadow;
+        &:before {
+          @include aws-bg('icons/play-w.svg');
+        }
+      }
     }
   }
 }
 .pricing-block {
   background: $primary;
   position: relative;
+  @include tablet-lg {
+    padding-bottom: 280px !important;
+  }
+  @include tablet {
+    padding-bottom: 340px !important;
+  }
+  @include mobile {
+    padding-bottom: 400px !important;
+  }
   img {
     position: absolute;
     left: 7%;
@@ -42,6 +90,18 @@
     width: auto;
     height: 100%;
     z-index: 2;
+    @include tablet-lg {
+      width: 28%;
+      height: auto;
+    }
+    @include tablet {
+      width: 40%;
+      height: auto;
+    }
+    @include mobile {
+      width: 60%;
+      height: auto;
+    }
   }
   &:after {
     content: '';
