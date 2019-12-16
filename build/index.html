@@ -13,6 +13,7 @@
 </head>
 
 <body class="index">
+  
   <div class='dogwood-home-wrap'>
 <a class='left-block half-block' href='/home'>
 <div class='sun'></div>
@@ -22,12 +23,10 @@ Continue
 <br>
 to Site
 </div>
-<div class='dogwood-gradient'></div>
-<div class='dogwood-content'></div>
-<div class='dogwood-btn primary home-book-btn' data-target='#booking-modal' data-toggle='modal'>
+<div class='dogwood-btn primary' data-target='#booking-modal' data-toggle='modal' id='home-book-btn' onclick='event.preventDefault();'>
 Book Now
 </div>
-<div class='dogwood-text-btn home-phone-btn' href='tel:(919) 656-1426'>
+<div class='phone-btn' id='home-phone-btn' onclick='event.preventDefault();window.open(&#39;tel:(919) 656-1426&#39;);'>
 (919) 656-1426
 </div>
 </a>
@@ -40,7 +39,7 @@ Pricing
 All the info you'll need to book your move today.
 </h3>
 </a>
-<a class='dogwood-cta-block cta-2' href='/packing-supplies'>
+<a class='dogwood-cta-block cta-2' href='/packing'>
 <h2>
 Packing + Supplies
 </h2>
@@ -69,15 +68,23 @@ Apply for Driver or Mover positions at Dogwood today!
 <h2 class='half-h2'>
 About Us
 </h2>
+<h3>
+Learn about the Dogwood Promise.
+</h3>
 </a>
 <a class='dogwood-cta-block half-cta cta-6' href='/contact'>
 <h2 class='half-h2'>
 Contact
 </h2>
+<h3>
+All the ways you can reach us.
+</h3>
 </a>
 </div>
 </div>
 </div>
+
+
 
   <div class='modal fade' id='contact-modal' role='dialog' tabindex='-1'>
 <button aria-label='Close' class='close' data-dismiss='modal' id='modal-close' type='button'></button>
@@ -114,6 +121,9 @@ Message
 </div>
 </div>
 </div>
+
+
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -24,6 +24,11 @@
   -webkit-transition: .2s all ease-in-out;
   -moz-transition: .2s all ease-in-out;
 }
+@mixin transition-m {
+  transition: .4s all ease-in-out;
+  -webkit-transition: .4s all ease-in-out;
+  -moz-transition: .4s all ease-in-out;
+}
 @mixin transition-s {
   transition: .6s all ease-in-out;
   -webkit-transition: .6s all ease-in-out;

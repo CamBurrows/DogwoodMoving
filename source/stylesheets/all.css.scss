@@ -24,6 +24,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
+  &.fixed-body {
+    overflow: hidden;
+  }
 }
 
 //containers
@@ -242,6 +245,11 @@ h1.page-banner {
   position: relative;
   @include primary-down;
   padding-top: 60px;
+  // @include aws-bg('graphics/box-bg.svg');
+  background-repeat: repeat;
+  @include tablet {
+    font-size: 80px;
+  }
   &:before {
     content:'';
     height: calc(100% - 60px);
@@ -253,6 +261,9 @@ h1.page-banner {
     display: block;
     left: 7%;
     bottom: 0;
+    @include tablet {
+      width: 30px;
+    }
   };
   &:after {
     content:'';
@@ -266,6 +277,9 @@ h1.page-banner {
     bottom:0;
     right: 7%;
     transform: rotate(180deg);
+    @include tablet {
+      width: 30px;
+    }
   }
 }
 a {

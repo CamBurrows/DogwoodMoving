@@ -3,6 +3,9 @@
   margin-right: auto;
   position: relative;
   padding: 60px 0;
+  @include tablet-lg {
+    width: 100%;
+  }
   h2 {
     color: $primary;
     font-size: 38px;
@@ -10,6 +13,9 @@
     margin-bottom: 30px;
     border-bottom: 3px solid $primary-l;
     margin-top: 30px;
+    @include tablet-lg {
+      font-size: 30px;
+    }
   }
   .question {
     color: $off-black;
@@ -20,6 +26,10 @@
     margin-bottom: 30px;
     margin-left: 12px;
     line-height: 1.2;
+    @include tablet-lg {
+      font-size: 20px;
+    }
+    margin-left: 0;
     &:hover {
       color: $primary-l;
     }
@@ -108,6 +118,28 @@
     @include transition;
     &:hover {
       color: $primary;
+    }
+  }
+  @include tablet-lg {
+    top: unset;
+    bottom: 0;
+    width: 100%;
+    border-radius: 16px 16px 0px 0px;
+    border-width: 1px 1px 0px 1px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $white;
+    justify-content: space-between;
+    align-self: center;
+    padding: 8px;
+    .caption {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .jump-to {
+      margin: 6px 6px;
+      font-size: 14px;
     }
   }
 }

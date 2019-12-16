@@ -26,6 +26,13 @@ function navHideShow() {
   dogwoodPageContent.prevScrollpos = dogwoodPageContent.currentScrollPos;
 }
 
+$(document).on('click', '#dogwood-menu-toggle', function(e) {
+  e.preventDefault();
+  $('body').toggleClass('fixed-body');
+  $(this).toggleClass('open');
+  $('.mobile-nav-slideout').toggleClass('open')
+});
+
 //modal bg close
 // $(document).ready(function(){
 //   $('.modal-backdrop').on('click', function(){

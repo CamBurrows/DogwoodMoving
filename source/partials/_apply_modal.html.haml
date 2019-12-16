@@ -11,13 +11,33 @@
             %input.form-control{:name => "full_name", :type => "text", :placeholder => "Full Name"}
             %label
               Full Name
-          .form-group  
+          .form-group
+            %input.form-control{:name => "phone", :type => "tel", :placeholder => "Phone"}
+            %label
+              Phone
+          .form-group
             %input.form-control{:name => "_replyto", :type => "email", :placeholder => "Email"}
             %label
               Email
           .form-group
+            %input.form-control{:name => "dob", :type => "date", :placeholder => "Date of Birth"}
+            %label
+              Date of Birth
+          .form-group
+            %input.form-control{:name => "education", :type => "text", :placeholder => "Highest level of Education"}
+            %label
+              Highest Level of Education
+          .form-group
+            %textarea.form-control{:name => "criminal", :type => "text", :placeholder => "Any Criminal History? if YES, please explain."}
+            %label
+              Criminal History
+          .form-group
+            %input.form-control{:name => "start", :type => "date", :placeholder => "Available Start Date"}
+            %label
+              Available Start Date
+          .form-group
             %textarea.form-control{:name => "message", :placeholder => "Message"}
             %label
-              Message
+              Additional Info
           %input{type:"text", name:"_gotcha", style:"display:none"}
           %button.dogwood-btn.green.center{:type => "submit", class:'submit'} Send

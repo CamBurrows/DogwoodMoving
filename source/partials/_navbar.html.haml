@@ -1,13 +1,21 @@
 %nav.navbar-wrap
   .navbar-container
     .bottom-row
-      =link_to 'Pricing', '/pricing', class: 'nav-link'
-      =link_to 'Packing', '/packing', class: 'nav-link'
-      =link_to 'FAQ', '/faq', class: 'nav-link'
+      =link_to 'Pricing', '/pricing', class: 'nav-link', "data-hover"=>"Pricing"
+      =link_to 'Packing', '/packing', class: 'nav-link', "data-hover"=>"Packing"
+      =link_to 'FAQ', '/faq', class: 'nav-link', "data-hover"=>"FAQ"
       =link_to '', '/home', class: 'nav-logo'
-      =link_to 'Team', '/team', class: 'nav-link'
-      =link_to 'About', '/about', class: 'nav-link'
-      =link_to 'Contact', '/contact', class: 'nav-link'
+      =link_to 'Team', '/team', class: 'nav-link', "data-hover"=>"Team"
+      =link_to 'About', '/about', class: 'nav-link', "data-hover"=>"About"
+      =link_to 'Contact', '/contact', class: 'nav-link', "data-hover"=>"Contact"
+      #dogwood-menu-toggle
+        #hamburger
+          %span
+          %span
+          %span
+        #cross
+          %span
+          %span
   .under-row{class:"#{page_classes}"}
     .dogwood-text-btn.nav-book-btn{'data-toggle'=>'modal', 'data-target'=>'#booking-modal'}
       Book Move
@@ -15,3 +23,10 @@
       Message
     .dogwood-text-btn.nav-phone-btn{href:"tel:#{dogwood_phone}"}
       =dogwood_phone
+.mobile-nav-slideout
+  =link_to 'Pricing', '/pricing', class: 'nav-link', "data-hover"=>"Pricing"
+  =link_to 'Packing', '/packing', class: 'nav-link', "data-hover"=>"Packing"
+  =link_to 'FAQ', '/faq', class: 'nav-link', "data-hover"=>"FAQ"
+  =link_to 'Team', '/team', class: 'nav-link', "data-hover"=>"Team"
+  =link_to 'About', '/about', class: 'nav-link', "data-hover"=>"About"
+  =link_to 'Contact', '/contact', class: 'nav-link', "data-hover"=>"Contact"

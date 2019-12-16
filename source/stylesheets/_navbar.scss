@@ -5,7 +5,7 @@
   height: 80px;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 8;
   background-color: $off-white;
   @include slide-trans;
   overflow: visible;
@@ -22,7 +22,7 @@
   width: 96%;
   margin: 0 auto;
   position: relative;
-  z-index: 5;
+  z-index: 9;
 }
 .under-row {
   opacity: 1;
@@ -61,14 +61,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 5;
+  z-index: 10;
+  @include tablet-lg {
+    justify-content: center;
+  }
   a.nav-link {
     color: $primary;
     @include font-b;
     font-size: 20px;
     text-decoration: none;
+    text-shadow: none;
+    outline: none;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    &::before {
+      position: absolute;
+      overflow: hidden;
+      max-height: 100%;
+      max-width: 0;
+      border-bottom: 2px solid $primary-l2;
+      color: $primary-l2;
+      content: attr(data-hover);
+      @include transition-m;
+    }
     &:hover {
-      color: $primary-l;
+      outline: none;
+      text-decoration: none;
+      &::before {
+        max-width: 100%;
+      }
+    }
+    @include tablet-lg {
+      display: none;
     }
   }
   .nav-logo {
@@ -78,5 +102,136 @@
     background-size: contain;
     background-position: center;
     position: relative;
+  }
+}
+
+//mobile
+.mobile-nav-slideout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:-100%;
+  display: flex;
+  z-index: 4;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 160px 10px 10px 10px;
+  @include slide-trans;
+  @include primary-down;
+  opacity: 0;
+  a.nav-link {
+    color: $white;
+    @include font-b;
+    font-size: 20px;
+    text-decoration: none;
+    text-shadow: none;
+    outline: none;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+  }
+  &.open {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+#dogwood-menu-toggle {
+  display: none;
+  transition:.25s ease-in-out;
+  width:50px;
+  height:50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 50;
+  border-radius: 5px 0px 0px 5px;
+  span {
+    background-color: $primary;
+    display: block;
+    @include transition;
+  }
+  cursor: pointer;
+  @include tablet-lg {
+    display: block;
+  }
+  #hamburger {
+    position:absolute;
+    height:100%;
+    width:100%;
+    span {
+      @include transition;
+      width:30px;
+      height:3px;
+      position:relative;
+      top:12px;
+      left:10px;
+      margin:5px 0;
+      &:nth-child(1){
+        transition-delay:.5s;
+      }
+      &:nth-child(2){
+        transition-delay:.625s;
+      }
+      &:nth-child(3){
+        transition-delay:.75s;
+      }
+    }
+  }
+  #cross {
+    position:absolute;
+    height:100%;
+    width:100%;
+    transform:rotate(45deg);
+    span{
+      &:nth-child(1){
+        height:0%;
+        width:2px;
+        position:absolute;
+        top:10%;
+        left:24px;
+        transition-delay:0s;
+      }
+      &:nth-child(2){
+        width:0%;
+        height:2px;
+        position:absolute;
+        left:10%;
+        top:24px;
+        transition-delay:.25s;
+      }
+    }
+  }
+}
+#dogwood-menu-toggle.open {
+  #hamburger {
+    span {
+      width:0%;
+      &:nth-child(1){
+        transition-delay:0s;
+      }
+      &:nth-child(2){
+        transition-delay:.125s;
+      }
+      &:nth-child(3){
+        transition-delay:.25s;
+      }
+    }
+  }
+  #cross {
+    span {
+      &:nth-child(1){
+        height:80%;
+        transition-delay:.625s;
+      }
+    }
+    span {
+      &:nth-child(2){
+        width:80%;
+        transition-delay:.375s;
+      }
+    }    
   }
 }
