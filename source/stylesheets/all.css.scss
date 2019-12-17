@@ -77,6 +77,12 @@ body {
   &:hover {
     color: $primary-l;
   }
+  &.underline {
+    border-bottom: 2px solid $primary;
+    &:hover {
+      border-bottom: 2px solid $primary-l;
+    }
+  }
 }
 .dogwood-btn-outline {
   position: relative;

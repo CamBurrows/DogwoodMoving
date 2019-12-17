@@ -3,8 +3,11 @@
   .modal-dialog.modal-dialog-centered{role:"document"}
     .modal-content-container
       .modal-body
-        %form.contact-form{:action => "https://formspree.io/mwkpdebo", :method => "POST"}
-          .success
+        %form.contact-form#application{:action => "https://formspree.io/mwkpdebo", :method => "POST"}
+          .success-message
+            Thanks for Reaching Out!
+            %span
+              We'll get back to your shortly.
           %legend
             Apply Now
           .form-group
@@ -40,4 +43,5 @@
             %label
               Additional Info
           %input{type:"text", name:"_gotcha", style:"display:none"}
+          %input{type:"hidden", name:"_subject", style:"display:none", value:'New Team Application Submission'}
           %button.dogwood-btn.green.center{:type => "submit", class:'submit'} Send

@@ -52,6 +52,13 @@
       color: $off-white;
       background-color: $primary-l;
     }
+    @include tablet {
+      font-size: 14px;
+      margin: 2px;
+    }
+  }
+  @include tablet {
+    padding: 0 3px 3px 3px;
   }
 }
 .bottom-row {

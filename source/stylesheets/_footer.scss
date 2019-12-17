@@ -8,4 +8,10 @@
   @include font-b;
   font-size: 18px;
   background-color: $primary;
+  @include tablet-lg {
+    font-size: 16px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
 }

@@ -66,21 +66,46 @@ $(document).ready(function(){
 //ajax forms
 $(document).ready(function(){
 
-  function contact_success() {
-    $('.contact-form').addClass('success')
+
+  //general contact
+  function general_contact_success() {
+    $('#general-contact').addClass('success');
+    setTimeout(function(){
+      $('#contact-modal').modal('hide')
+    }, 2000)
+  }
+  function general_contact_error() {
   }
 
-  function contact_error() {
-  }
+  var contact_form = $('#general-contact').get(0);
 
-  var contact_form = $('.contact-form').get(0);
-
-  $('.contact-form').on('submit', function(e){
+  $('#general-contact').on('submit', function(e){
     e.preventDefault();
     var data = new FormData(contact_form);
-    ajax(contact_form.method, contact_form.action, data, contact_success, contact_error);
+    ajax(contact_form.method, contact_form.action, data, general_contact_success, general_contact_error);
   })
 
+  //application
+  function application_contact_success() {
+    $('#application').addClass('success')
+    setTimeout(function(){
+      $('#apply-modal').modal('hide')
+    }, 2000)
+  }
+  function application_contact_error() {
+
+  }
+
+  var application_form = $('#application').get(0);
+
+  $('#application').on('submit', function(e){
+    e.preventDefault();
+    var data = new FormData(application_form);
+    ajax(application_form.method, application_form.action, data, application_contact_success, application_contact_error);
+  })
+
+
+  //ajax function
   function ajax(method, url, data, success, error) {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);

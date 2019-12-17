@@ -4,13 +4,18 @@
     @include font-b;
     border-width: 0px;
     text-align: center;
+    @include transition;
   }
   select, input, textarea, .form-control, .form-group {
     position: relative;
+    overflow: hidden;
     @include placeholder {
       position: absolute;
       left: 12px;
     }
+  }
+  .form-group {
+    max-height: 500px;
   }
   input, textarea, .form-control, select {
     background-color: transparent;
@@ -97,10 +102,20 @@
     }
   }
   .success-message {
-    display: none;
     @include font-b;
     font-size: 24px;
     color: $primary;
+    opacity: 0;
+    max-height: 0px;
+    @include slide-trans;
+    text-align: center;
+    font-size: 24px;
+    span {
+      display: block;
+      font-size: 18px;
+      padding-bottom: 0px;
+      @include slide-trans;
+    }
     &:after {
       content: '✔';
       width: 40px;
@@ -110,6 +125,24 @@
       @include font-b;
       font-size: 30px;
       border-radius: 100%;
+      padding: 40px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &.success {
+    .success-message {
+      max-height: 200px;
+      opacity: 1;
+      span {
+        padding-bottom: 30px;
+      }
+    }
+    .form-group, legend, button {
+      max-height: 0px;
+      opacity: 0;
     }
   }
 }

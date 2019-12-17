@@ -1,0 +1,45 @@
+.modal.fade#booking-modal{tabindex:"-1", role:"dialog"}
+  %button.close#modal-close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+  .modal-dialog.modal-dialog-centered{role:"document"}
+    .modal-content-container
+      .modal-body
+        %h2.primary.center
+          Book with Dogwood
+        .col-container
+          .col-left
+            %p.off-black.tips-heading
+              Self-booking quick tips and info:
+            %ul.general-tips
+              %li
+                26 Foot Moving Truck + 2 Professional Movers = $110/hr
+              %li
+                Add an additional mover for $35/HR
+              %li
+                A crew of 4 Movers and 2-26ft box trucks is available. Please call or email to schedule.
+              %li
+                As a rule of thumb when self-estimating, our trucks hold approximately 1500 sq ft of normally
+                furnished living space and one full load typically takes 4-6 hours plus drive time.
+              %li
+                Two hour minimum on all jobs.
+              %li
+                There are no travels fees within Wake County.
+              %li
+                Travel fees are determined by the following equation: $1 x per mile (round trip) for the address
+                outside of Wake County.
+              %li
+                Payment: We don&#39;t require any deposit or payments up front. We accept ALL payments at the
+              %li
+                completion of the move. We accept Cash, Checks, and all major credit cards (there is a 3%
+                processing fee associated with all CC transactions).
+          .col-right
+            %h4.center
+              Need more info about anything? Learn More:
+            .booking-nav-container
+              =link_to 'Pricing', '/pricing', class:'dogwood-text-btn underline'
+              =link_to 'Packing', '/packing', class:'dogwood-text-btn underline'
+              =link_to 'FAQ', '/faq', class:'dogwood-text-btn underline'
+              =link_to 'About', '/about', class:'dogwood-text-btn underline'
+              =link_to dogwood_phone, "tel:#{dogwood_phone}", class:'dogwood-text-btn underline'
+        %iframe{:frameborder => "0", :height => "800", :src => "https://app.acuityscheduling.com/schedule.php?owner=18746662", :width => "100%"}
+        %script{:src => "https://embed.acuityscheduling.com/js/embed.js", :type => "text/javascript"}
+
