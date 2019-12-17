@@ -72,7 +72,7 @@ $(document).ready(function(){
     $('#general-contact').addClass('success');
     setTimeout(function(){
       $('#contact-modal').modal('hide')
-    }, 2000)
+    }, 4000)
   }
   function general_contact_error() {
   }
@@ -90,7 +90,7 @@ $(document).ready(function(){
     $('#application').addClass('success')
     setTimeout(function(){
       $('#apply-modal').modal('hide')
-    }, 2000)
+    }, 4000)
   }
   function application_contact_error() {
 

@@ -8,6 +8,10 @@
     flex-direction: column;
     overflow: auto;
   }
+  @include mobile {
+    height: 90vh;
+    background-color: $creme;
+  }
   .left-block {
     flex-grow: 1;
     height: 100%;
@@ -237,6 +241,18 @@
       &.half-cta {
         width: 100%;
         height: 100%;
+        @include mobile {
+          width: 50%;
+          position: absolute;
+          &.cta-5 {
+            top: 0;
+            left: 0;
+          }
+          &.cta-6 {
+            top: 0;
+            right: 0;
+          }
+        }
         h2, h3 {
           color: $off-black;
         }

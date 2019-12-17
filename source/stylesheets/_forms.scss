@@ -8,7 +8,7 @@
   }
   select, input, textarea, .form-control, .form-group {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     @include placeholder {
       position: absolute;
       left: 12px;
@@ -141,6 +141,7 @@
       }
     }
     .form-group, legend, button {
+      overflow: hidden;
       max-height: 0px;
       opacity: 0;
     }

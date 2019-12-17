@@ -1,0 +1,29 @@
+%script{type:'application/ld+json'}
+:javascript
+
+  data.faq.each do |section|
+
+
+  if (listRows) {
+  faqQuestions = listRows.map(row => {
+    let name = get(row, 'h2[0]');
+    let text = get(row, 'p[0]');
+    return (
+      {
+        "@type": "Question",
+        "name": name,
+        "acceptedAnswer": {
+          "@type":"Answer",
+          "text": text,
+        }
+      }
+    )
+  })
+}
+
+  const renderData = () => {
+    const data = {
+      "@context": "http://schema.org/",
+      "@type": "FAQPage",
+      "mainEntity": faqQuestions,
+    }
