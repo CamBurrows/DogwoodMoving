@@ -6,12 +6,7 @@
   z-index: 6;
   @include laptop{
     flex-direction: column;
-    height: auto;
     overflow: auto;
-  }
-  @include mobile {
-    height: 100vh;
-    overflow: hidden;
   }
   .left-block {
     flex-grow: 1;
@@ -27,8 +22,12 @@
     position: relative;
     z-index: 6;
     @include laptop{
-      height: 20vh;
+      height: 30%;
       background-image: none;
+    }
+    @include mobile {
+      height: 20%;
+      flex-grow: 1;
     }
     .sun {
       width: 210px;
@@ -210,15 +209,11 @@
     height: 100%;
     @include slide-trans;
     @include laptop{
-      height: 80vh;
-      justify-content: center;
-    }
-    @include tablet-lg{
-      height: 80vh;
+      height: 70%;
       justify-content: center;
     }
     @include mobile{
-      height: 70vh;
+      height: 80%;
       justify-content: center;
     }
     &:hover {

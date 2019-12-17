@@ -10,6 +10,9 @@
     width: 94% !important;
     max-width: unset;
     padding: 60px;
+    @include mobile {
+      width: 98% !important;
+    }
     .rate-card {
       width: 30%;
       height: 540px;

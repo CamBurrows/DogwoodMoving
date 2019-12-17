@@ -137,10 +137,12 @@
   }
   @include tablet-lg {
     width: 90%;
-    margin-top: 0px;
+    margin-top: 10px;
+    max-height: calc(100% - 20px);
   }
   @include mobile {
     width: 98%;
     margin-top: 0px;
+    max-height: 100%;
   }
 }
