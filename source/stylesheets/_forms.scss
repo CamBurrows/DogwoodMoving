@@ -117,7 +117,10 @@
       @include slide-trans;
     }
     &:after {
-      content: '✔';
+      content: '';
+      @include bg-img ('white_check.png');
+      background-size: 60%;
+      background-position: center;
       width: 40px;
       height: 40px;
       color: $white;
