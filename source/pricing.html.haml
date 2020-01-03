@@ -11,7 +11,7 @@
         Our
       %span.b
         Rates
-    .container.rates-container
+    .container.rates-container.hide-overflow
       .rate-card{'data-toggle'=>'modal', 'data-target'=>'#booking-modal'}
         .header
           $110/hr
@@ -97,10 +97,10 @@
         View Frequently Asked Questions
       =link_to 'FAQ','/faq', class:'dogwood-btn-outline green center'
   .info-block.container
-    .col-container.img-left
-      .left-col
+    .col-container.img-left.hide-overflow
+      .left-col{'data-entrance'=>'from-left'}
         =aws_img('photos/pricing-info-1.jpg')
-      .right-col
+      .right-col{'data-entrance'=>'from-right'}
         %h2.bot-marg.off-black
           %span.b
             Pricing Overview

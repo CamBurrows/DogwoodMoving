@@ -6,10 +6,10 @@
   %h1.page-banner
     Packing
   .info-block.container
-    .col-container.img-left
-      .left-col
+    .col-container.img-left.hide-overflow
+      .left-col{'data-entrance'=>'from-left'}
         =aws_img('photos/packing-info-1.jpg')
-      .right-col
+      .right-col{'data-entrance'=>'from-right'}
         %h2.bot-marg.off-black
           %span.b-i
             Experts
@@ -23,8 +23,8 @@
           Dogwood Moving, we’ll go the extra mile to help make your move as convenient and as stress-free as
           possible, which is why we offer additional packing services.
   .packing-wrap.cta-block-wrap
-    .container.cta-block-container.flex-start.top-layer
-      .content-col
+    .container.cta-block-container.flex-start.top-layer.hide-overflow
+      .content-col{'data-entrance'=>'from-left'}
         %h2.bot-marg.off-black
           Need
           %span.b
