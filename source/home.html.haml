@@ -84,3 +84,54 @@
           If you’ve ever moved before, you’ll know that half the battle of a move lies in the packing and labeling of your items. It is crucial that your items are packed appropriately and securely to ensure they are not damaged during transport and organized in a way that makes it easy to unpack. Take advantage of our packing services to help with high value and breakable items.
         .cta-row.margin-bot
           =link_to 'View Packing', '/packing', class:'dogwood-btn-outline green left'
+
+%script{type:'application/ld+json'}
+  {
+  "@context": "http://schema.org/",
+  "@type": "Service",
+  "serviceType": "Moving Company",
+  "provider": {
+  "@type": "LocalBusiness",
+  "name": "Dogwood Moving Company"
+  },
+  "areaServed": {
+  "@type": "City",
+  "name": "Raleigh, NC"
+  },
+  "telephone": "#{dogwood_phone}",
+  "url": "https://www.dogwoodmoving.com",
+  "logo": "https://dogwood-moving.s3.us-east-2.amazonaws.com/logos/DMC_SVG.svg",
+  "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Cleaning services",
+  "itemListElement": [
+  {
+  "@type": "OfferCatalog",
+  "name": "Apartment and Home Moving",
+  "itemListElement": [
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Service",
+  "name": "2-Man Moving Team"
+  }
+  },
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Service",
+  "name": "3-Man Moving Team"
+  }
+  },
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Service",
+  "name": "4-Man Moving Team"
+  }
+  }
+  ]
+  }
+  ]
+  }
+  }

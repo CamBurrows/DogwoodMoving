@@ -33,7 +33,7 @@
   "@context": "http://schema.org/",
   "@type": "FAQPage",
   "mainEntity": [
-  - data.faq.each do |section|
+  - data.faq.each_with_index do |section, index|
     - section[1].each_with_index do |question, i|
       {
       "@type": "Question",
@@ -42,7 +42,5 @@
       "@type":"Answer",
       "text": "#{question.answer.html_safe}"
       }
-      },
+      }#{(i+1) == section[1].length && index == 3 ? "" : ","}
   ]}
-
--# "#{(i+1) == data.faq.length ? '' : ','}"

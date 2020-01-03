@@ -46,3 +46,54 @@
           Contact
         %h3
           All the ways you can reach us.
+
+%script{type:'application/ld+json'}
+  {
+  "@context": "http://schema.org/",
+  "@type": "Service",
+  "serviceType": "Moving Company",
+  "provider": {
+  "@type": "LocalBusiness",
+  "name": "Dogwood Moving Company"
+  },
+  "areaServed": {
+  "@type": "City",
+  "name": "Raleigh, NC"
+  },
+  "telephone": "#{dogwood_phone}",
+  "url": "https://www.dogwoodmoving.com",
+  "logo": "https://dogwood-moving.s3.us-east-2.amazonaws.com/logos/DMC_SVG.svg",
+  "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Cleaning services",
+  "itemListElement": [
+  {
+  "@type": "OfferCatalog",
+  "name": "Apartment and Home Moving",
+  "itemListElement": [
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Service",
+  "name": "2-Man Moving Team"
+  }
+  },
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Service",
+  "name": "3-Man Moving Team"
+  }
+  },
+  {
+  "@type": "Offer",
+  "itemOffered": {
+  "@type": "Service",
+  "name": "4-Man Moving Team"
+  }
+  }
+  ]
+  }
+  ]
+  }
+  }
