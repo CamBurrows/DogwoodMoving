@@ -21,6 +21,7 @@
 </head>
 
 <body class="pricing pricing_index">
+
     <nav class='navbar-wrap'>
 <div class='navbar-container'>
 <div class='bottom-row'>
@@ -79,7 +80,7 @@ Our
 Rates
 </span>
 </h2>
-<div class='container rates-container'>
+<div class='container rates-container hide-overflow'>
 <div class='rate-card' data-target='#booking-modal' data-toggle='modal'>
 <div class='header'>
 $110/hr
@@ -205,11 +206,11 @@ View Frequently Asked Questions
 </div>
 </div>
 <div class='info-block container'>
-<div class='col-container img-left'>
-<div class='left-col'>
+<div class='col-container img-left hide-overflow'>
+<div class='left-col' data-entrance='from-left'>
 <img src="https://dogwood-moving.s3.us-east-2.amazonaws.com/photos/pricing-info-1.jpg" alt="Pricing info 1" />
 </div>
-<div class='right-col'>
+<div class='right-col' data-entrance='from-right'>
 <h2 class='bot-marg off-black'>
 <span class='b'>
 Pricing Overview
@@ -392,5 +393,6 @@ Need more info about anything? Learn More:
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="/javascripts/site.js"></script>
+  <script src="/javascripts/scroll-entrance.js"></script>
 </body>
 </html>
