@@ -21,6 +21,12 @@
 </head>
 
 <body class="<%= page_classes %>">
+  <%# <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script>
+    var controller = new ScrollMagic.Controller();
+  </script> %>
+
   <% if page_classes != "index" %>
     <%= partial "partials/navbar", locals: { page: page_classes } %>
   <% end %>
@@ -46,5 +52,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <%= javascript_include_tag "site" %>
+  <%= javascript_include_tag "scroll-entrance" %>
 </body>
 </html>

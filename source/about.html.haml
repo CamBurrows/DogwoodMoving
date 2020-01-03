@@ -6,8 +6,8 @@
   %h1.page-banner
     About
   .info-block.container.about-container
-    .col-container.img-right
-      .left-col
+    .col-container.img-right.hide-overflow
+      .left-col{'data-entrance'=>'from-left'}
         %h2.off-black
           %span.l
             Meet
@@ -46,5 +46,5 @@
           =link_to dogwood_phone, "tel:#{dogwood_phone}"
           %br
           =link_to dogwood_email, "mailto:#{dogwood_phone}"
-      .right-col
+      .right-col{'data-entrance'=>'from-right'}
         =aws_img('logos/DMC_SVG.svg')

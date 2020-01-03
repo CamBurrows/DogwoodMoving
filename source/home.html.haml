@@ -4,7 +4,7 @@
 
 .wrap
   .hero
-    %h1.hero-text
+    %h1.hero-text{"data-entrance"=>"from-bottom"}
       Dedicated
       %br
       %span
@@ -12,10 +12,10 @@
       .video-cta{'data-toggle'=>'modal','data-target'=>'#youtube-modal'}
         Watch Video
   .info-block.container
-    .col-container.img-left
-      .left-col
+    .col-container.img-left.hide-overflow
+      .left-col{"data-entrance"=>"from-left"}
         =aws_img('photos/home-info-1.png')
-      .right-col
+      .right-col{"data-entrance"=>"from-right"}
         %h2.bot-marg.off-black
           %span.l
             Your
@@ -36,8 +36,8 @@
       =link_to 'Learn More', '/pricing', class:'dogwood-btn-outline green center'
   .cta-block-wrap.pricing-block
     =aws_img('photos/home-cta-1.png')
-    .container.cta-block-container.flex-end.top-layer
-      .content-col
+    .container.cta-block-container.flex-end.top-layer.hide-overflow
+      .content-col{"data-entrance"=>"from-right"}
         %h2.bot-marg.white
           %span.l
             Passing Along the
@@ -52,10 +52,10 @@
         .cta-row.margin-bot
           =link_to 'View Pricing', '/pricing', class:'dogwood-btn-outline white left'
   .info-block.container
-    .col-container.img-left
-      .left-col
+    .col-container.img-left.hide-overflow
+      .left-col{"data-entrance"=>"from-left"}
         =aws_img('photos/home-info-2.jpg')
-      .right-col
+      .right-col{"data-entrance"=>"from-right"}
         %h2.bot-marg.off-black
           %span.b
             Residential
@@ -75,7 +75,7 @@
           =link_to 'Book Now', '/booking', class:'dogwood-btn-outline green left'
   .cta-block-wrap.packing-block
     .container.cta-block-container.flex-start.top-layer
-      .content-col
+      .content-col{"data-entrance"=>"from-right"}
         %h2.bot-marg.off-black
           %span.b
             Expert

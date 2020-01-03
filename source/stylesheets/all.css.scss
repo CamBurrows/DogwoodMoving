@@ -12,6 +12,10 @@
 @import 'faq';
 @import 'about_contact';
 
+//scroll entry
+[data-entrance] { visibility: hidden; }
+.js [data-entrance] { visibility: hidden; }
+
 //general
 * {
   box-sizing: border-box;
@@ -50,6 +54,9 @@ body {
   }
   @include tablet-lg {
     width: 96%;
+  }
+  &.hide-overflow {
+    overflow: hidden;
   }
 }
 
@@ -185,6 +192,9 @@ body {
       @include tablet-lg {
         flex-direction: column;
       }
+    }
+    &.hide-overflow {
+      overflow: hidden;
     }
   }
   .left-col {
