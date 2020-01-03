@@ -1,4 +1,4 @@
-#contact-modal, #apply-modal, #youtube-modal, #booking-modal {
+#contact-modal, #apply-modal, #youtube-modal, #booking-modal, #estimate-modal {
   width: 450px;
   max-height: calc(100% - 120px);
   margin: 0 auto;
@@ -78,7 +78,7 @@
   }
 }
 
-#booking-modal {
+#booking-modal, #estimate-modal {
   width: 80%;
   margin-top: 20px;
   max-height: calc(100% - 40px);

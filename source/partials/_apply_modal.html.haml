@@ -11,7 +11,7 @@
           %legend
             Apply Now
           .form-group
-            %input.form-control{:name => "full_name", :type => "text", :placeholder => "Full Name"}
+            %input.form-control#apply-name{:name => "full_name", :type => "text", :placeholder => "Full Name"}
             %label
               Full Name
           .form-group
@@ -43,5 +43,5 @@
             %label
               Additional Info
           %input{type:"text", name:"_gotcha", style:"display:none"}
-          %input{type:"hidden", name:"_subject", style:"display:none", value:'New Team Application Submission'}
+          %input#apply-subject{type:"hidden", name:"_subject", style:"display:none", value:'New Team Application Submission'}
           %button.dogwood-btn.green.center{:type => "submit", class:'submit'} Send

@@ -85,7 +85,18 @@ $(document).ready(function(){
     ajax(contact_form.method, contact_form.action, data, general_contact_success, general_contact_error);
   })
 
+  $('#contact-name').on('change', function(){
+    name = $('#contact-name').val()
+    $('#contact-subject').attr('value', 'Contact Form from' + name);
+  })
+
   //application
+
+  $('#apply-name').on('change', function(){
+    apply_name = $('#apply-name').val()
+    $('#apply-subject').attr('value', 'Job Application from' + apply_name);
+  })
+
   function application_contact_success() {
     $('#application').addClass('success')
     setTimeout(function(){
@@ -93,7 +104,6 @@ $(document).ready(function(){
     }, 4000)
   }
   function application_contact_error() {
-
   }
 
   var application_form = $('#application').get(0);
@@ -102,6 +112,30 @@ $(document).ready(function(){
     e.preventDefault();
     var data = new FormData(application_form);
     ajax(application_form.method, application_form.action, data, application_contact_success, application_contact_error);
+  })
+
+  //estimate
+
+  $('#estimate-name').on('change', function(){
+    estimate_name = $('#estimate-name').val()
+    $('#estimate-subject').attr('value', 'Estimate Request from' + estimate_name);
+  })
+
+  function estimate_contact_success() {
+    $('#estimate').addClass('success')
+    setTimeout(function(){
+      $('#estimate-modal').modal('hide')
+    }, 4000)
+  }
+  function estimate_contact_error() {
+  }
+
+  var estimate_form = $('#estimate').get(0);
+
+  $('#estimate').on('submit', function(e){
+    e.preventDefault();
+    var data = new FormData(estimate_form);
+    ajax(estimate_form.method, estimate_form.action, data, estimate_contact_success, estimate_contact_error);
   })
 
 

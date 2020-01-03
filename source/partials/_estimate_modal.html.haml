@@ -1,0 +1,71 @@
+.modal.fade#estimate-modal{tabindex:"-1", role:"dialog"}
+  %button.close#modal-close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+  .modal-dialog.modal-dialog-centered{role:"document"}
+    .modal-content-container
+      .modal-body
+        %form.contact-form#estimate{:action => "https://formspree.io/xeqedzgb", :method => "POST"}
+          .success-message
+            Thanks for Reaching Out!
+            %span
+              We'll get back to your shortly.
+          %legend
+            Request an Estimate
+          .form-group
+            %input.form-control#estimate-name{:name => "full_name", :type => "text", :placeholder => "Full Name"}
+            %label
+              Full Name
+          .form-group
+            %input.form-control{:name => "phone", :type => "tel", :placeholder => "Phone"}
+            %label
+              Phone
+          .form-group
+            %input.form-control{:name => "_replyto", :type => "email", :placeholder => "Email"}
+            %label
+              Email
+          .form-group
+            %input.form-control{:name => "starting_address", :type => "text", :placeholder => "Starting Address"}
+            %label
+              Starting Address
+          .form-group
+            %input.form-control{:name => "ending_address", :type => "text", :placeholder => "Ending Address"}
+            %label
+              Ending Address
+          .form-group
+            %input.form-control{:name => "property_type", :type => "text", :placeholder => "Property Type (House, Townhouse, Apt, etc.)"}
+            %label
+              Property Type
+          .form-group
+            %input.form-control{:name => "bedrooms", :type => "text", :placeholder => "Number of Bedrooms"}
+            %label
+              Number of Bedrooms
+          .form-group
+            %input.form-control{:name => "area", :type => "text", :placeholder => "Approximate Square Footage"}
+            %label
+              Approximate Square Footage
+          .form-group
+            %input.form-control{:name => "boxes", :type => "number", :placeholder => "Approximate Number Of Boxes"}
+            %label
+              Approximate Number Of Boxes
+          .form-group
+            %textarea.form-control{:name => "furnishing", :type => "text", :placeholder => "Describe How Furnished your Home is"}
+            %label
+              How Furnished?
+          .form-group
+            %textarea.form-control{:name => "large_items", :type => "text", :placeholder => "List all appliances and any large/heavy items being moved"}
+            %label
+              Large items
+          .form-group
+            %textarea.form-control{:name => "disassembly", :type => "text", :placeholder => "List any furniture that we'll need to disassemble/reassemble"}
+            %label
+              Disassemble/Reassemble Items?
+          .form-group
+            %textarea.form-control{:name => "footpath", :placeholder => "Describe the walk from where ever we can park our truck into your home"}
+            %label
+              Describe the Walk
+          .form-group
+            %textarea.form-control{:name => "info", :placeholder => "Additional relevant info"}
+            %label
+              Additional Info
+          %input{type:"text", name:"_gotcha", style:"display:none"}
+          %input#estimate-subject{type:"hidden", name:"_subject", style:"display:none", value:'New Estimate Request'}
+          %button.dogwood-btn.green.center{:type => "submit", class:'submit'} Send

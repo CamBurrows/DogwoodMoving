@@ -14,7 +14,7 @@
           %span.b
             Phone
         %p.off-black
-          =link_to dogwood_phone, "tel:#{dogwood_phone}"
+          =link_to dogwood_phone, "tel:#{dogwood_phone}", class:'phone-btn green'
         %h2.off-black
           %span.b
             Email
@@ -24,5 +24,8 @@
           .dogwood-btn-outline.green.left{'data-toggle'=>"modal",'data-target'=>"#contact-modal"}
             Message
         .button-row
-          .dogwood-btn-outline.green.left
+          .dogwood-btn-outline.green.left{'data-toggle'=>"modal",'data-target'=>"#booking-modal"}
             Book Now
+        .button-row
+          .dogwood-btn-outline.green.left{'data-toggle'=>"modal",'data-target'=>"#estimate-modal"}
+            Request Estimate

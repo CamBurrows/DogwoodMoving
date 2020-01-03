@@ -14,7 +14,8 @@
   .info-block.container
     .col-container.img-left.hide-overflow
       .left-col{"data-entrance"=>"from-left"}
-        =aws_img('photos/home-info-1.png')
+        .youtube-frame
+          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/FgxTBTX-J-k", :width => "560"}
       .right-col{"data-entrance"=>"from-right"}
         %h2.bot-marg.off-black
           %span.l

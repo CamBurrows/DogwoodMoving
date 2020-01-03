@@ -147,3 +147,12 @@
     }
   }
 }
+#estimate {
+  textarea {
+    height: 140px !important;
+    background-color: rgba(49, 101, 31, 0.1) !important;
+    & + label {
+      bottom: 98% !important;
+    }
+  }
+}

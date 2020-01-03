@@ -3,6 +3,9 @@
   width: 100%;
   padding: 60px 0;
   background-color: $off-black;
+  .estimate-btn-row {
+    margin: 10px 0;
+  }
   .rates-container {
     display: flex;
     justify-content: space-between;
