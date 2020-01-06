@@ -49,6 +49,7 @@
       width: 28px;
       height: 14px;
       @include aws-bg('icons/chevron-up.svg');
+      background-size: contain;
       transform: rotate(180deg);
       @include transition;
     }
