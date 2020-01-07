@@ -35,12 +35,13 @@
     background-color: $primary-l;
     background-position: center;
     background-size: contain;
-    top: 0px;
-    right: 0px;
     @include transition;
-    position: absolute;
-    z-index: 4;
+    position: fixed;
+    z-index: 500;
     &:hover {
+      background-color: $primary;
+    }
+    @include tablet-lg {
       background-color: $primary;
     }
   }

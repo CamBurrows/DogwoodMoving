@@ -3,8 +3,17 @@
   width: 100%;
   @include aws-bg('photos/hero-image.jpg');
   background-size: cover;
-  background-position: 50% 15%;
+  background-position: 50% 10%;
   position: relative;
+  @include tablet-lg {
+    height: 50vh;
+    background-size: cover;
+    background-position: left bottom;
+  }
+  @include mobile {
+    height: 46vh;
+    background-position: left bottom;
+  }
   &:after {
     content:'';
     position: absolute;

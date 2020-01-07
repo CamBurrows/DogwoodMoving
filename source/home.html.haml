@@ -5,8 +5,8 @@
 .wrap
   .hero
     %h1.hero-text{"data-entrance"=>"from-bottom"}
-      .video-cta{'data-toggle'=>'modal','data-target'=>'#youtube-modal'}
-        Watch Video
+      -# .video-cta{'data-toggle'=>'modal','data-target'=>'#youtube-modal'}
+      -#   Watch Video
   .info-block.container
     .col-container.img-left.hide-overflow
       .left-col{"data-entrance"=>"from-left"}
@@ -71,7 +71,7 @@
         .cta-row.margin-bot
           =link_to 'Book Now', '/booking', class:'dogwood-btn-outline green left'
   .cta-block-wrap.packing-block
-    .container.cta-block-container.flex-start.top-layer
+    .container.cta-block-container.flex-start.top-layer.hide-overflow
       .content-col{"data-entrance"=>"from-right"}
         %h2.bot-marg.off-black
           %span.b

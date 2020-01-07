@@ -224,6 +224,9 @@ body {
     @include img-shadow;
     margin-bottom: 40px;
   }
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 .cta-block-wrap {
   padding: 100px 0px;
@@ -242,6 +245,9 @@ body {
     @include tablet-lg {
       width: 100%;
     }
+  }
+  @include mobile {
+    padding: 60px 0;
   }
 }
 .cta-row {
@@ -320,7 +326,7 @@ p {
   line-height: 24px;
   @include mobile {
     font-size: 16px;
-    line-height: 1.15;
+    line-height: 1.6;
   }
 }
 h1 {
