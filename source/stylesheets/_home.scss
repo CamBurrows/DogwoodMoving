@@ -12,7 +12,7 @@
   }
   @include mobile {
     height: 46vh;
-    background-position: left bottom;
+    background-size: 100%;
   }
   &:after {
     content:'';
@@ -44,29 +44,34 @@
     }
     @include tablet {
       font-size: 60px;
-      bottom: 40px;
     }
     .video-cta {
       color: $primary;
-      font-size: 30px;
+      font-size: 20px;
       text-transform: uppercase;
       cursor: pointer;
-      padding: 20px 40px;
+      padding: 10px 20px;
       margin-top: 10px;
       margin-bottom: 20px;
       background-color: $white;
       border-radius: 8px;
       @include transition;
+      display: none;
+      @include tablet-lg {
+        display: block;
+      }
       &:before {
         content: '';
         display: inline-block;
         width: 35px;
-        height: 20px;
+        height: 18px;
         background-size: contain;
         background-position: center;
         @include aws-bg('icons/play-g.svg');
         @include transition;
         margin-right: 0px;
+        top: 2px;
+        position: relative;
       }
       &:hover {
         background-color: $primary;
@@ -75,6 +80,15 @@
         @include img-shadow;
         &:before {
           @include aws-bg('icons/play-w.svg');
+        }
+      }
+      @include mobile {
+        padding: 6px 12px;
+        font-size: 16px;
+        margin-bottom: 4px;
+        &:before {
+          height: 14px;
+          width: 24px;
         }
       }
     }
