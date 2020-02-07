@@ -68,3 +68,5 @@ set :relative_links, true
 Haml::TempleEngine.disable_option_validator!
 
 activate :livereload
+
+redirect "/home/", to: "/"

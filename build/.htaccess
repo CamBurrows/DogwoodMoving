@@ -9,3 +9,7 @@ RewriteCond %{HTTPS} !=on
 
 # Redirect to https version
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Redirect 301 /home/ https://www.dogwoodmoving.com/
+
+ErrorDocument 404 /

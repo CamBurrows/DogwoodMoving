@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta content="initial-scale=1,maximum-scale=1,user-scalable=no", name="viewport">
-  <meta name="description" content= <%= @description %> >
-  <meta name="keywords" content=<%= @keywords %> >
-  <title><%= @page_title %>Dogwood Moving Co.</title>
+  <meta name="description" content="<%= @description %>" >
+  <meta name="keywords" content="<%= @keywords %>" >
+  <title><%= @page_title %></title>
+  <link rel="canonical" href="<%= @canonical %>" />
   <link rel="shortcut icon" href="/images/dmc-favicon.ico">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155258188-1"></script>
@@ -22,21 +23,21 @@
 
 <body class="<%= page_classes %>">
 
-  <% if page_classes != "index" %>
-    <%= partial "partials/navbar", locals: { page: page_classes } %>
-  <% end %>
+  
+  <%= partial "partials/navbar", locals: { page: page_classes } %>
+  
   
   <%= yield %>
 
-  <% if page_classes != "index" %>
-    <%= partial "partials/footer" %>
-  <% end %>
+  
+  <%= partial "partials/footer" %>
+  
 
   <%= partial "partials/contact_modal" %>
   <%= partial "partials/booking_modal" %>
   <%= partial "partials/estimate_modal" %>
 
-  <% if page_classes == "home home_index"%>
+  <% if page_classes == "index"%>
     <%= partial "partials/youtube_modal" %>
   <% end %>
 
