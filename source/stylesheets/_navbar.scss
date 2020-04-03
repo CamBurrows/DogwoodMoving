@@ -110,6 +110,42 @@
     background-position: center;
     position: relative;
   }
+  .social-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tablet-lg {
+      display: none;
+    }
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      background-size: 80%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0 4px;
+      background-color: $primary;
+      padding: 4px;
+      border-radius: 6px;
+      @include transition;
+      &:hover {
+        transform: translateY(-3px);
+        background-color: $primary-l;
+      }
+      &.youtube {
+        @include bg-img('youtube-w.svg');
+      }
+      &.facebook {
+        @include bg-img('facebook-w.svg');
+      }
+      &.instagram {
+        @include bg-img('instagram-w.svg');
+      }
+      &.yelp {
+        @include bg-img('yelp-w.png');
+      }
+    }
+  }
 }
 
 //mobile
@@ -142,6 +178,34 @@
   &.open {
     left: 0;
     opacity: 1;
+  }
+  .social-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      background-size: 80%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0 4px;
+      padding: 4px;
+      border-radius: 6px;
+      @include transition;
+      &.youtube {
+        @include bg-img('youtube-w.svg');
+      }
+      &.facebook {
+        @include bg-img('facebook-w.svg');
+      }
+      &.instagram {
+        @include bg-img('instagram-w.svg');
+      }
+      &.yelp {
+        @include bg-img('yelp-w.png');
+      }
+    }
   }
 }
 
