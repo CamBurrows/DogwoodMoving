@@ -160,7 +160,7 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  padding: 160px 10px 10px 10px;
+  padding: 160px 10px 100px 10px;
   @include slide-trans;
   @include primary-down;
   opacity: 0;
@@ -183,6 +183,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: .5rem;
     .social-icon {
       width: 30px;
       height: 30px;
