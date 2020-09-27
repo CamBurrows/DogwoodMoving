@@ -35,8 +35,9 @@
         align-items: center;
         justify-content: center;
         color: $off-white;
+        line-height: 1;
         @include font-b;
-        font-size: 34px;
+        font-size: 24px;
         background-color: $primary;
       }
       .card-content {

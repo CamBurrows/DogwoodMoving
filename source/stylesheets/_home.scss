@@ -3,7 +3,7 @@
   width: 100%;
   @include aws-bg('photos/hero-image.jpg');
   background-size: cover;
-  background-position: 50% 10%;
+  background-position: center right;
   position: relative;
   @include tablet-lg {
     height: 50vh;
@@ -23,73 +23,94 @@
   }
   h1 {
     color: $white;
-    font-size: 120px;
+    font-size: 70px;
     @include font-c-b;
     text-transform: uppercase;
     position: absolute;
-    bottom: 0;
+    padding-right: 10px;
+    top: 0;
+    right: 0;
+    padding-top: 120px;
     display: flex;
+    height: 100%;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
+    align-items: flex-end;
+    text-align: right;
     line-height: .9;
     z-index: 2;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    @include tablet-lg {
+      display: none;
+    }
+    .horizontal-line {
+      width: 100%;
+      height: 2px;
+      margin: 8px 0;
+      background-color: $white;
+    }
     span {
-      font-size: 150px;
+      font-size: 50px;
       @include tablet {
-        font-size: 70px;
+        font-size: 30px;
       }
     }
     @include tablet {
       font-size: 60px;
     }
-    .video-cta {
-      color: $primary;
-      font-size: 20px;
-      text-transform: uppercase;
-      cursor: pointer;
-      padding: 10px 20px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      background-color: $white;
-      border-radius: 8px;
+  }
+  .video-cta {
+    color: $primary;
+    font-size: 20px;
+    z-index: 3;
+    width: fit-content;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: $white;
+    border-radius: 8px;
+    @include transition;
+    display: none;
+    @include tablet-lg {
+      display: block;
+    }
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 35px;
+      height: 18px;
+      background-size: contain;
+      background-position: center;
+      @include aws-bg('icons/play-g.svg');
       @include transition;
-      display: none;
-      @include tablet-lg {
-        display: block;
-      }
+      margin-right: 0px;
+      top: 2px;
+      position: relative;
+    }
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      transform: translateY(-2px);
+      @include img-shadow;
       &:before {
-        content: '';
-        display: inline-block;
-        width: 35px;
-        height: 18px;
-        background-size: contain;
-        background-position: center;
-        @include aws-bg('icons/play-g.svg');
-        @include transition;
-        margin-right: 0px;
-        top: 2px;
-        position: relative;
+        @include aws-bg('icons/play-w.svg');
       }
-      &:hover {
-        background-color: $primary;
-        color: $white;
-        transform: translateY(-2px);
-        @include img-shadow;
-        &:before {
-          @include aws-bg('icons/play-w.svg');
-        }
-      }
-      @include mobile {
-        padding: 6px 12px;
-        font-size: 16px;
-        margin-bottom: 4px;
-        &:before {
-          height: 14px;
-          width: 24px;
-        }
+    }
+    @include mobile {
+      padding: 6px 12px;
+      font-size: 16px;
+      margin-bottom: 4px;
+      &:before {
+        height: 14px;
+        width: 24px;
       }
     }
   }
