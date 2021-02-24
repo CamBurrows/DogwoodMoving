@@ -41,6 +41,9 @@ body {
   position: relative;
   &.nav-pad {
     padding-top: 80px;
+    @include mobile {
+      padding-top: 100px;
+    }
   }
 }
 .container {

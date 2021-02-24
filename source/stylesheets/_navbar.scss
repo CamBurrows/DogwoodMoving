@@ -42,11 +42,13 @@
   @include img-shadow;
   .nav-msg-btn,
   .nav-book-btn,
+  .nav-estimate-btn,
   .nav-phone-btn {
     background-color: $primary;
     color: $off-white;
-    padding: 6px 12px;
-    border-radius: 3px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 18px;
     margin: 6px;
     &:hover {
       color: $off-white;
@@ -56,9 +58,16 @@
       font-size: 14px;
       margin: 2px;
     }
+    @include mobile {
+      width: 48%;
+      text-align: center;
+    }
   }
   @include tablet {
     padding: 0 3px 3px 3px;
+  }
+  @include mobile {
+    flex-wrap: wrap;
   }
 }
 .bottom-row {
@@ -164,6 +173,9 @@
   @include slide-trans;
   @include primary-down;
   opacity: 0;
+  @include mobile {
+    padding: 190px 10px 100px 10px;
+  }
   a.nav-link {
     color: $white;
     @include font-b;
