@@ -44,7 +44,8 @@
   .nav-book-btn,
   .nav-estimate-btn,
   .nav-phone-btn {
-    background-color: $primary;
+    background-color: $dark-grey;
+    border: 2px solid $primary-l2;
     color: $off-white;
     padding: 8px 14px;
     border-radius: 4px;
